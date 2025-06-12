@@ -30,6 +30,15 @@ export default function HomeScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
 
+      {/* Back Arrow */}
+      <TouchableOpacity
+        style={styles.backArrow}
+        onPress={handleBackToWelcome}
+        activeOpacity={0.7}
+      >
+        <Text style={styles.backArrowText}>←</Text>
+      </TouchableOpacity>
+
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
@@ -101,15 +110,6 @@ export default function HomeScreen({ navigation }) {
             </TouchableOpacity>
           </View>
         </View>
-
-        <View style={styles.buttonSection}>
-          <TouchableOpacity
-            style={styles.backButton}
-            onPress={handleBackToWelcome}
-          >
-            <Text style={styles.backButtonText}>← Back to Welcome</Text>
-          </TouchableOpacity>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -119,6 +119,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#0a0e1a",
+  },
+  backArrow: {
+    position: "absolute",
+    top: 50,
+    bottom: 50,
+    left: 20,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 10,
+    borderWidth: 1,
+    borderColor: "rgba(100, 255, 218, 0.3)",
+  },
+  backArrowText: {
+    color: "#64ffda",
+    fontSize: 24,
+    fontWeight: "bold",
   },
   scrollView: {
     flex: 1,
@@ -229,24 +249,5 @@ const styles = StyleSheet.create({
     color: "#0a0e1a",
     fontSize: 14,
     fontWeight: "bold",
-  },
-  buttonSection: {
-    paddingBottom: 40,
-    paddingTop: 20,
-  },
-  backButton: {
-    width: "100%",
-    height: 50,
-    backgroundColor: "transparent",
-    borderRadius: 25,
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 1.5,
-    borderColor: "rgba(255, 255, 255, 0.3)",
-  },
-  backButtonText: {
-    color: "#ffffff",
-    fontSize: 16,
-    fontWeight: "500",
   },
 });
