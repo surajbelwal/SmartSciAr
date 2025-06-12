@@ -31,12 +31,8 @@ export default function WelcomeScreen({ navigation }) {
     ]).start();
   }, []);
 
-  const handleLoginPress = () => {
-    navigation.navigate("Login");
-  };
-
-  const handleSignupPress = () => {
-    navigation.navigate("Signup");
+  const handleGetStarted = () => {
+    navigation.navigate("Home");
   };
 
   return (
@@ -72,19 +68,11 @@ export default function WelcomeScreen({ navigation }) {
       {/* Buttons Section */}
       <Animated.View style={[styles.buttonSection, { opacity: fadeAnim }]}>
         <TouchableOpacity
-          style={[styles.button, styles.loginButton]}
-          onPress={handleLoginPress}
+          style={[styles.button, styles.getStartedButton]}
+          onPress={handleGetStarted}
           activeOpacity={0.8}
         >
-          <Text style={styles.loginButtonText}>Sign In</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={[styles.button, styles.signupButton]}
-          onPress={handleSignupPress}
-          activeOpacity={0.8}
-        >
-          <Text style={styles.signupButtonText}>Get Started</Text>
+          <Text style={styles.getStartedButtonText}>Get Started</Text>
         </TouchableOpacity>
       </Animated.View>
     </SafeAreaView>
@@ -175,21 +163,11 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 8,
   },
-  loginButton: {
-    backgroundColor: "#1565c0",
-    borderWidth: 0,
-  },
-  signupButton: {
+  getStartedButton: {
     backgroundColor: "#2e7d32",
     borderWidth: 0,
   },
-  loginButtonText: {
-    color: "#ffffff",
-    fontSize: 18,
-    fontWeight: "bold",
-    letterSpacing: 0.5,
-  },
-  signupButtonText: {
+  getStartedButtonText: {
     color: "#ffffff",
     fontSize: 18,
     fontWeight: "bold",
