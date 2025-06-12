@@ -33,6 +33,15 @@ export default function PhysicsScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
 
+      {/* Back Arrow */}
+      <TouchableOpacity
+        style={styles.backArrow}
+        onPress={handleBackToHome}
+        activeOpacity={0.7}
+      >
+        <Text style={styles.backArrowText}>←</Text>
+      </TouchableOpacity>
+
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
@@ -72,10 +81,6 @@ export default function PhysicsScreen({ navigation }) {
             </TouchableOpacity>
           ))}
         </View>
-
-        <TouchableOpacity style={styles.backButton} onPress={handleBackToHome}>
-          <Text style={styles.backButtonText}>← Back to Home</Text>
-        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
@@ -85,6 +90,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#0a0e1a",
+  },
+  backArrow: {
+    position: "absolute",
+    top: 50,
+    left: 20,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 10,
+    borderWidth: 1,
+    borderColor: "rgba(255, 107, 107, 0.3)",
+  },
+  backArrowText: {
+    color: "#ff6b6b",
+    fontSize: 24,
+    fontWeight: "bold",
   },
   scrollView: {
     flex: 1,
@@ -184,21 +208,5 @@ const styles = StyleSheet.create({
     color: "#ff6b6b",
     fontSize: 18,
     fontWeight: "bold",
-  },
-  backButton: {
-    backgroundColor: "transparent",
-    borderRadius: 25,
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 1.5,
-    borderColor: "rgba(255, 255, 255, 0.3)",
-    marginTop: 20,
-  },
-  backButtonText: {
-    color: "#ffffff",
-    fontSize: 16,
-    fontWeight: "500",
   },
 });
