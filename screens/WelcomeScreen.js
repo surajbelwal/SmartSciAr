@@ -14,24 +14,18 @@ const { width, height } = Dimensions.get("window");
 
 export default function WelcomeScreen({ navigation }) {
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const slideAnim = useRef(new Animated.Value(50)).current;
-  const scaleAnim = useRef(new Animated.Value(0.8)).current;
+  const slideAnim = useRef(new Animated.Value(30)).current;
 
   useEffect(() => {
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 1000,
+        duration: 800,
         useNativeDriver: true,
       }),
       Animated.timing(slideAnim, {
         toValue: 0,
-        duration: 800,
-        useNativeDriver: true,
-      }),
-      Animated.timing(scaleAnim, {
-        toValue: 1,
-        duration: 1200,
+        duration: 600,
         useNativeDriver: true,
       }),
     ]).start();
@@ -49,13 +43,6 @@ export default function WelcomeScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
 
-      {/* Animated Background Elements */}
-      <View style={styles.backgroundElements}>
-        <View style={[styles.floatingElement, styles.element1]} />
-        <View style={[styles.floatingElement, styles.element2]} />
-        <View style={[styles.floatingElement, styles.element3]} />
-      </View>
-
       {/* Header Section */}
       <Animated.View
         style={[
@@ -63,35 +50,23 @@ export default function WelcomeScreen({ navigation }) {
           { opacity: fadeAnim, transform: [{ translateY: slideAnim }] },
         ]}
       >
-        <Text style={styles.title}>🚀 Smart Sci AR</Text>
-        <Text style={styles.subtitle}>Explore Science Through AR Magic!</Text>
+        <Text style={styles.title}>Smart Sci AR</Text>
+        <Text style={styles.subtitle}>Science learning through AR</Text>
         <View style={styles.gradeContainer}>
           <Text style={styles.gradeText}>
-            📚 Classes 6-12 • Physics • Chemistry • Biology 🧬
+            Classes 6-12 • Physics • Chemistry • Biology
           </Text>
         </View>
       </Animated.View>
 
       {/* Welcome Content */}
-      <Animated.View
-        style={[
-          styles.contentSection,
-          { opacity: fadeAnim, transform: [{ scale: scaleAnim }] },
-        ]}
-      >
-        <Text style={styles.welcomeText}>Ready to Make Science Cool? 🔬</Text>
-        <Text style={styles.descriptionText}>
-          🌟 Interactive AR experiments at your fingertips{"\n"}
-          ⚛️ Visualize atoms, molecules, and reactions{"\n"}
-          🧪 Virtual labs that feel real{"\n"}
-          🎯 Gamified learning for better grades
+      <Animated.View style={[styles.contentSection, { opacity: fadeAnim }]}>
+        <Text style={styles.welcomeText}>
+          Learn science with augmented reality
         </Text>
-
-        <View style={styles.featureHighlight}>
-          <Text style={styles.highlightText}>
-            ✨ Make Learning an Adventure! ✨
-          </Text>
-        </View>
+        <Text style={styles.descriptionText}>
+          Explore science with interactive 3D AR models and simulations
+        </Text>
       </Animated.View>
 
       {/* Buttons Section */}
@@ -99,28 +74,19 @@ export default function WelcomeScreen({ navigation }) {
         <TouchableOpacity
           style={[styles.button, styles.loginButton]}
           onPress={handleLoginPress}
-          activeOpacity={0.7}
+          activeOpacity={0.8}
         >
-          <Text style={styles.loginButtonText}>🎓 Login & Learn</Text>
+          <Text style={styles.loginButtonText}>Sign In</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.button, styles.signupButton]}
           onPress={handleSignupPress}
-          activeOpacity={0.7}
+          activeOpacity={0.8}
         >
-          <Text style={styles.signupButtonText}>🚀 Join the Adventure</Text>
+          <Text style={styles.signupButtonText}>Get Started</Text>
         </TouchableOpacity>
-
-        <Text style={styles.motivationText}>
-          Your science journey starts here! 💫
-        </Text>
       </Animated.View>
-
-      {/* Footer */}
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>🔬 Discover • 🧠 Learn • 🌟 Excel</Text>
-      </View>
     </SafeAreaView>
   );
 }
@@ -129,65 +95,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#0a0e1a",
-    paddingHorizontal: 20,
-  },
-  backgroundElements: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-  },
-  floatingElement: {
-    position: "absolute",
-    borderRadius: 50,
-    opacity: 0.1,
-  },
-  element1: {
-    width: 100,
-    height: 100,
-    backgroundColor: "#64ffda",
-    top: "10%",
-    right: "10%",
-  },
-  element2: {
-    width: 80,
-    height: 80,
-    backgroundColor: "#ff6b6b",
-    top: "30%",
-    left: "5%",
-  },
-  element3: {
-    width: 60,
-    height: 60,
-    backgroundColor: "#4ecdc4",
-    top: "60%",
-    right: "15%",
+    paddingHorizontal: 30,
   },
   headerSection: {
-    flex: 1.2,
+    flex: 2,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    paddingTop: 60,
   },
   title: {
-    fontSize: 38,
+    fontSize: 36,
     fontWeight: "bold",
     color: "#ffffff",
     textAlign: "center",
-    marginBottom: 10,
-    letterSpacing: 1,
+    marginBottom: 12,
+    letterSpacing: 0.5,
   },
   subtitle: {
     fontSize: 18,
     color: "#64ffda",
     textAlign: "center",
     fontWeight: "600",
-    letterSpacing: 0.5,
-    marginBottom: 15,
+    marginBottom: 20,
   },
   gradeContainer: {
     backgroundColor: "rgba(100, 255, 218, 0.1)",
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+    paddingHorizontal: 25,
+    paddingVertical: 12,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: "#64ffda",
@@ -202,68 +136,52 @@ const styles = StyleSheet.create({
     flex: 1.5,
     justifyContent: "center",
     alignItems: "center",
-    paddingHorizontal: 15,
+    paddingHorizontal: 20,
   },
   welcomeText: {
-    fontSize: 26,
+    fontSize: 24,
     fontWeight: "bold",
     color: "#ffffff",
     textAlign: "center",
-    marginBottom: 20,
-    lineHeight: 32,
+    marginBottom: 16,
+    lineHeight: 30,
   },
   descriptionText: {
     fontSize: 16,
     color: "#a0a9c0",
     textAlign: "center",
-    lineHeight: 26,
-    marginBottom: 20,
-  },
-  featureHighlight: {
-    backgroundColor: "rgba(255, 107, 107, 0.15)",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderRadius: 25,
-    borderWidth: 1,
-    borderColor: "#ff6b6b",
-  },
-  highlightText: {
-    color: "#ff6b6b",
-    fontSize: 16,
-    fontWeight: "600",
-    textAlign: "center",
+    lineHeight: 24,
+    fontWeight: "400",
   },
   buttonSection: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical: 10,
+    paddingBottom: 50,
   },
   button: {
     width: width * 0.85,
-    height: 60,
-    borderRadius: 15,
+    height: 56,
+    borderRadius: 28,
     justifyContent: "center",
     alignItems: "center",
-    marginVertical: 8,
-    elevation: 5,
+    marginVertical: 12,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 3,
+      height: 4,
     },
     shadowOpacity: 0.3,
-    shadowRadius: 4,
+    shadowRadius: 8,
+    elevation: 8,
   },
   loginButton: {
-    backgroundColor: "#1e88e5",
-    borderWidth: 2,
-    borderColor: "#1976d2",
+    backgroundColor: "#1565c0",
+    borderWidth: 0,
   },
   signupButton: {
-    backgroundColor: "rgba(76, 175, 80, 0.2)",
-    borderWidth: 2,
-    borderColor: "#4caf50",
+    backgroundColor: "#2e7d32",
+    borderWidth: 0,
   },
   loginButtonText: {
     color: "#ffffff",
@@ -272,27 +190,9 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   signupButtonText: {
-    color: "#4caf50",
+    color: "#ffffff",
     fontSize: 18,
     fontWeight: "bold",
     letterSpacing: 0.5,
-  },
-  motivationText: {
-    color: "#64ffda",
-    fontSize: 14,
-    fontWeight: "500",
-    textAlign: "center",
-    marginTop: 15,
-    fontStyle: "italic",
-  },
-  footer: {
-    paddingBottom: 20,
-    alignItems: "center",
-  },
-  footerText: {
-    color: "#64ffda",
-    fontSize: 14,
-    fontWeight: "400",
-    letterSpacing: 1,
   },
 });
