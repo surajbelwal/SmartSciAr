@@ -10,6 +10,18 @@ import {
 import { StatusBar } from "expo-status-bar";
 
 export default function HomeScreen({ navigation }) {
+  const handlePhysicsPress = () => {
+    navigation.navigate("Physics");
+  };
+
+  const handleChemistryPress = () => {
+    navigation.navigate("Chemistry");
+  };
+
+  const handleBiologyPress = () => {
+    navigation.navigate("Biology");
+  };
+
   const handleBackToWelcome = () => {
     navigation.navigate("Welcome");
   };
@@ -40,6 +52,7 @@ export default function HomeScreen({ navigation }) {
             <TouchableOpacity
               style={[styles.featureCard, styles.physicsCard]}
               activeOpacity={0.8}
+              onPress={handlePhysicsPress}
             >
               <View style={styles.cardIcon}>
                 <Text style={styles.iconText}>⚛️</Text>
@@ -56,6 +69,7 @@ export default function HomeScreen({ navigation }) {
             <TouchableOpacity
               style={[styles.featureCard, styles.chemistryCard]}
               activeOpacity={0.8}
+              onPress={handleChemistryPress}
             >
               <View style={styles.cardIcon}>
                 <Text style={styles.iconText}>🧪</Text>
@@ -72,6 +86,7 @@ export default function HomeScreen({ navigation }) {
             <TouchableOpacity
               style={[styles.featureCard, styles.biologyCard]}
               activeOpacity={0.8}
+              onPress={handleBiologyPress}
             >
               <View style={styles.cardIcon}>
                 <Text style={styles.iconText}>🧬</Text>
