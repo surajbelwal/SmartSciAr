@@ -11,22 +11,32 @@ import { StatusBar } from "expo-status-bar";
 
 export default function ChemistryScreen({ navigation }) {
   const chemistryTopics = [
-    "Atomic Structure & Periodic Table",
-    "Chemical Bonding",
-    "Molecular Geometry",
-    "Chemical Reactions",
-    "Acids & Bases",
-    "Organic Chemistry",
-    "Electrochemistry",
-    "Chemical Equilibrium",
-    "Thermochemistry",
-    "Gas Laws",
-    "Solutions & Mixtures",
-    "Polymer Chemistry",
+    {
+      title: "Atomic Structure & Periodic Table",
+      modelId: "atom",
+      hasModel: true,
+    },
+    { title: "Chemical Bonding", modelId: null, hasModel: false },
+    { title: "Molecular Geometry", modelId: null, hasModel: false },
+    { title: "Chemical Reactions", modelId: null, hasModel: false },
+    { title: "Acids & Bases", modelId: null, hasModel: false },
+    { title: "Organic Chemistry", modelId: null, hasModel: false },
+    { title: "Electrochemistry", modelId: null, hasModel: false },
+    { title: "Chemical Equilibrium", modelId: null, hasModel: false },
+    { title: "Thermochemistry", modelId: null, hasModel: false },
+    { title: "Gas Laws", modelId: null, hasModel: false },
+    { title: "Solutions & Mixtures", modelId: null, hasModel: false },
+    { title: "Polymer Chemistry", modelId: null, hasModel: false },
   ];
 
   const handleBackToHome = () => {
     navigation.navigate("Home");
+  };
+
+  const handleTopicPress = (topic) => {
+    if (topic.hasModel && topic.modelId) {
+      navigation.navigate("ChemistryModel", { modelId: topic.modelId });
+    }
   };
 
   return (
@@ -63,20 +73,33 @@ export default function ChemistryScreen({ navigation }) {
           {chemistryTopics.map((topic, index) => (
             <TouchableOpacity
               key={index}
-              style={styles.topicCard}
+              style={[
+                styles.topicCard,
+                topic.hasModel && styles.topicCardActive,
+              ]}
               activeOpacity={0.8}
+              onPress={() => handleTopicPress(topic)}
             >
               <View style={styles.topicNumber}>
                 <Text style={styles.topicNumberText}>{index + 1}</Text>
               </View>
               <View style={styles.topicContent}>
-                <Text style={styles.topicTitle}>{topic}</Text>
+                <Text style={styles.topicTitle}>{topic.title}</Text>
                 <Text style={styles.topicSubtitle}>
-                  3D molecular models & lab simulations
+                  {topic.hasModel
+                    ? "3D model available - Tap to explore!"
+                    : "Coming soon..."}
                 </Text>
               </View>
               <View style={styles.arrowIcon}>
-                <Text style={styles.arrowText}>→</Text>
+                <Text
+                  style={[
+                    styles.arrowText,
+                    topic.hasModel && styles.arrowTextActive,
+                  ]}
+                >
+                  →
+                </Text>
               </View>
             </TouchableOpacity>
           ))}
@@ -208,5 +231,14 @@ const styles = StyleSheet.create({
     color: "#4ecdc4",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  topicCardActive: {
+    backgroundColor: "rgba(78, 205, 196, 0.1)",
+    borderColor: "#4ecdc4",
+    borderWidth: 2,
+  },
+  arrowTextActive: {
+    color: "#ffffff",
+    fontSize: 20,
   },
 });
