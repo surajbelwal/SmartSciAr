@@ -11,22 +11,43 @@ import { StatusBar } from "expo-status-bar";
 
 export default function BiologyScreen({ navigation }) {
   const biologyTopics = [
-    "Cell Structure & Function",
-    "DNA & Genetics",
-    "Photosynthesis",
-    "Cellular Respiration",
-    "Human Body Systems",
-    "Evolution & Natural Selection",
-    "Ecology & Ecosystems",
-    "Plant Biology",
-    "Animal Behavior",
-    "Microbiology",
-    "Biotechnology",
-    "Human Anatomy",
+    {
+      title: "Cell Model - Basic Structure",
+      modelId: "cellModel",
+      hasModel: true,
+    },
+    { title: "Plant Cell Structure", modelId: "plantCell", hasModel: true },
+    { title: "Animal Cell Structure", modelId: "animalCell", hasModel: true },
+    { title: "Human Cell", modelId: "humanCell", hasModel: true },
+    { title: "Prokaryotic Cell", modelId: "prokaryoteCell", hasModel: true },
+    { title: "Neuron Structure", modelId: "neuron", hasModel: true },
+    { title: "DNA & RNA Structure", modelId: "dnaRna", hasModel: true },
+    { title: "Human Heart", modelId: "humanHeart", hasModel: true },
+    { title: "Human Brain Structure", modelId: "humanBrain", hasModel: true },
+    { title: "Human Eye Structure", modelId: "humanEye", hasModel: true },
+    { title: "Human Skull", modelId: "humanSkull", hasModel: true },
+    { title: "Human Skeleton", modelId: "skeleton", hasModel: true },
+    { title: "Digestive System", modelId: "digestiveSystem", hasModel: true },
+    { title: "Excretory System", modelId: "excretorySystem", hasModel: true },
+    { title: "Heart and Lungs", modelId: "heartLungs", hasModel: true },
+    { title: "Coronavirus (COVID-19)", modelId: "coronavirus", hasModel: true },
+    {
+      title: "Female Muscular System",
+      modelId: "femaleMuscular",
+      hasModel: true,
+    },
+    { title: "Cervical Vertebra", modelId: "cervicalVertebra", hasModel: true },
+    { title: "Python Skull", modelId: "pythonSkull", hasModel: true },
   ];
 
   const handleBackToHome = () => {
     navigation.navigate("Home");
+  };
+
+  const handleTopicPress = (topic) => {
+    if (topic.hasModel) {
+      navigation.navigate("BiologyModel", { modelId: topic.modelId });
+    }
   };
 
   return (
@@ -65,12 +86,13 @@ export default function BiologyScreen({ navigation }) {
               key={index}
               style={styles.topicCard}
               activeOpacity={0.8}
+              onPress={() => handleTopicPress(topic)}
             >
               <View style={styles.topicNumber}>
                 <Text style={styles.topicNumberText}>{index + 1}</Text>
               </View>
               <View style={styles.topicContent}>
-                <Text style={styles.topicTitle}>{topic}</Text>
+                <Text style={styles.topicTitle}>{topic.title}</Text>
                 <Text style={styles.topicSubtitle}>
                   3D biological models & life processes
                 </Text>

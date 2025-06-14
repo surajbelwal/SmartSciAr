@@ -7,6 +7,7 @@ import PhysicsScreen from "./screens/PhysicsScreen";
 import ChemistryScreen from "./screens/ChemistryScreen";
 import BiologyScreen from "./screens/BiologyScreen";
 import ChemistryModelScreen from "./screens/ChemistryModelScreen";
+import BiologyModelScreen from "./screens/BiologyModelScreen";
 
 const Stack = createStackNavigator();
 
@@ -40,6 +41,7 @@ export default function App() {
         <Stack.Screen name="Chemistry" component={ChemistryScreen} />
         <Stack.Screen name="Biology" component={BiologyScreen} />
         <Stack.Screen name="ChemistryModel" component={ChemistryModelScreen} />
+        <Stack.Screen name="BiologyModel" component={BiologyModelScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
