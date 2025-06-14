@@ -109,31 +109,6 @@ const ModelViewer = ({ modelData, navigation }) => {
         style={[styles.backgroundGradient, { opacity: fadeAnim }]}
       />
 
-      {/* Floating Particles */}
-      <View style={styles.particlesContainer}>
-        {[...Array(6)].map((_, i) => (
-          <Animated.View
-            key={i}
-            style={[
-              styles.particle,
-              {
-                left: `${15 + i * 15}%`,
-                animationDelay: `${i * 0.5}s`,
-                transform: [
-                  {
-                    translateY: slideAnim.interpolate({
-                      inputRange: [0, 50],
-                      outputRange: [0, -20 - i * 5],
-                    }),
-                  },
-                ],
-                opacity: fadeAnim,
-              },
-            ]}
-          />
-        ))}
-      </View>
-
       {/* Back Arrow with Glow Effect */}
       <Animated.View
         style={[
@@ -323,23 +298,7 @@ const styles = StyleSheet.create({
     background:
       "linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(26, 31, 46, 0.8) 100%)",
   },
-  particlesContainer: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    height: "100%",
-    zIndex: 1,
-  },
-  particle: {
-    position: "absolute",
-    width: 4,
-    height: 4,
-    backgroundColor: "#4ecdc4",
-    borderRadius: 2,
-    opacity: 0.6,
-    top: "20%",
-  },
+
   backArrowContainer: {
     position: "absolute",
     top: 50,
