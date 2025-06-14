@@ -16,17 +16,99 @@ export default function ChemistryScreen({ navigation }) {
       modelId: "atom",
       hasModel: true,
     },
-    { title: "Chemical Bonding", modelId: null, hasModel: false },
-    { title: "Molecular Geometry", modelId: null, hasModel: false },
-    { title: "Chemical Reactions", modelId: null, hasModel: false },
-    { title: "Acids & Bases", modelId: null, hasModel: false },
-    { title: "Organic Chemistry", modelId: null, hasModel: false },
-    { title: "Electrochemistry", modelId: null, hasModel: false },
+    {
+      title: "Atomic Models & Theory",
+      modelId: "atomicModel",
+      hasModel: true,
+    },
+    {
+      title: "Periodic Table of Elements",
+      modelId: "periodicTable",
+      hasModel: true,
+    },
+    {
+      title: "Water Molecule (H₂O)",
+      modelId: "water",
+      hasModel: true,
+    },
+    {
+      title: "Water Ball-and-Stick Model",
+      modelId: "waterBallStick",
+      hasModel: true,
+    },
+    {
+      title: "Liquid Water Structure",
+      modelId: "liquidWater",
+      hasModel: true,
+    },
+    {
+      title: "Benzene - Aromatic Compounds",
+      modelId: "benzene",
+      hasModel: true,
+    },
+    {
+      title: "Molecular Structure & Bonding",
+      modelId: "molecule",
+      hasModel: true,
+    },
+    {
+      title: "Carbon Dioxide (CO₂)",
+      modelId: "carbonDioxide",
+      hasModel: true,
+    },
+    {
+      title: "Glucose - Carbohydrates",
+      modelId: "glucose",
+      hasModel: true,
+    },
+    {
+      title: "Methane (CH₄) - Alkanes",
+      modelId: "methane",
+      hasModel: true,
+    },
+    {
+      title: "Ethane Molecule",
+      modelId: "ethane",
+      hasModel: true,
+    },
+    {
+      title: "Diamond Crystal Structure",
+      modelId: "diamond",
+      hasModel: true,
+    },
+    {
+      title: "F Orbital - Quantum Chemistry",
+      modelId: "orbitalF",
+      hasModel: true,
+    },
+    {
+      title: "Dxz Orbital - Transition Metals",
+      modelId: "orbitalDxz",
+      hasModel: true,
+    },
+    {
+      title: "Cyclohexane Chair Conformation",
+      modelId: "cyclohexane",
+      hasModel: true,
+    },
+    {
+      title: "Dopamine - Neurotransmitters",
+      modelId: "dopamine",
+      hasModel: true,
+    },
+    {
+      title: "Phenol - Aromatic Alcohols",
+      modelId: "phenol",
+      hasModel: true,
+    },
+    {
+      title: "Sodium Chloride (NaCl)",
+      modelId: "nacl",
+      hasModel: true,
+    },
     { title: "Chemical Equilibrium", modelId: null, hasModel: false },
     { title: "Thermochemistry", modelId: null, hasModel: false },
-    { title: "Gas Laws", modelId: null, hasModel: false },
-    { title: "Solutions & Mixtures", modelId: null, hasModel: false },
-    { title: "Polymer Chemistry", modelId: null, hasModel: false },
+    { title: "Electrochemistry", modelId: null, hasModel: false },
   ];
 
   const handleBackToHome = () => {
