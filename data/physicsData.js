@@ -113,97 +113,97 @@ export const physicsModels = {
 
   figure105: {
     id: "figure105",
-    title: "Physics Figure 10.5",
+    title: "Center of Curvature Ray Reflection",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-105-fb979b10afb94d12b1f7753a1e9b8f7a",
     embedUrl:
       "https://sketchfab.com/models/fb979b10afb94d12b1f7753a1e9b8f7a/embed",
     description: [
-      "• A physics model demonstrating advanced rotational concepts, possibly including energy considerations in rotational motion systems.",
-      "• Shows the relationship between rotational kinetic energy and the motion of rotating objects, connecting energy principles with rotational mechanics.",
-      "• Illustrates how energy is stored and transferred in rotating systems, important for understanding flywheels, turbines, and other rotational energy devices.",
-      "• Demonstrates conservation principles in rotational motion, including conservation of angular momentum and mechanical energy in rotating systems.",
-      "• Essential for understanding power transmission systems, rotating machinery efficiency, and energy storage applications in modern technology.",
+      "• A fundamental ray optics demonstration showing how light rays passing through the center of curvature reflect back along the same path.",
+      "• Illustrates that rays hitting the mirror surface at normal incidence (perpendicular to the surface) reflect directly back toward the source.",
+      "• Shows this principle applies to both concave mirrors (rays through center of curvature) and convex mirrors (rays directed toward center of curvature).",
+      "• Demonstrates the law of reflection where the angle of incidence equals angle of reflection, with both being zero for normal incidence.",
+      "• Essential for understanding retroreflection, optical alignment systems, and the design of precision measurement instruments like interferometers.",
     ],
   },
 
   figure106: {
     id: "figure106",
-    title: "Physics Figure 10.6",
+    title: "Oblique Ray Reflection at Mirror Pole",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-106-8cd1ddf92a45465fa90aa248ba756536",
     embedUrl:
       "https://sketchfab.com/models/8cd1ddf92a45465fa90aa248ba756536/embed",
     description: [
-      "• A rotational physics model showing complex interactions between multiple rotating components or systems in mechanical arrangements.",
-      "• Demonstrates how multiple rotating objects can interact through gears, belts, or other mechanical linkages to transfer motion and force.",
-      "• Illustrates the principles of mechanical advantage in rotational systems, showing how gear ratios affect speed and torque relationships.",
-      "• Shows practical applications in automotive transmissions, industrial machinery, and mechanical devices that require precise motion control.",
-      "• Critical for understanding complex mechanical systems where multiple rotational components must work together efficiently and reliably.",
+      "• A detailed ray optics demonstration showing how light rays incident obliquely at the pole of mirrors follow the fundamental laws of reflection.",
+      "• Illustrates that incident and reflected rays make equal angles with the principal axis when striking the mirror at point P (the pole).",
+      "• Shows this oblique reflection principle applies to both concave and convex mirrors, maintaining symmetrical angles about the principal axis.",
+      "• Demonstrates the universal nature of reflection laws: angle of incidence equals angle of reflection, measured from the normal at the point of incidence.",
+      "• Essential for understanding complete ray diagrams, image formation analysis, and the behavior of light at different points on curved mirror surfaces.",
     ],
   },
 
   figure107: {
     id: "figure107",
-    title: "Physics Figure 10.7",
+    title: "Ray Diagrams for Concave Mirror Image Formation",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-107-45b8d74f7dff48dcbf7f7d385571df32",
     embedUrl:
       "https://sketchfab.com/models/45b8d74f7dff48dcbf7f7d385571df32/embed",
     description: [
-      "• An advanced rotational physics demonstration showing equilibrium conditions and stability in rotating mechanical systems.",
-      "• Illustrates concepts of rotational equilibrium, where the net torque on a system is zero and the system maintains stable rotational motion.",
-      "• Shows how gyroscopic effects and angular momentum conservation create stability in rotating objects like bicycles, tops, and spacecraft.",
-      "• Demonstrates the relationship between rotational motion and balance, explaining why rotating objects exhibit unique stability characteristics.",
-      "• Important for understanding vehicle dynamics, aircraft stability, satellite orientation control, and other applications requiring rotational stability.",
+      "• A comprehensive demonstration of how concave mirrors form different types of images depending on object position relative to the focal point and center of curvature.",
+      "• Shows the systematic construction of ray diagrams using principal rays: parallel ray, focal ray, and center of curvature ray.",
+      "• Illustrates how image characteristics (real/virtual, upright/inverted, magnified/diminished) change as object distance varies from infinity to the mirror.",
+      "• Demonstrates practical applications in optical devices like reflecting telescopes, headlights, solar concentrators, and shaving mirrors.",
+      "• Essential for understanding image formation principles, magnification calculations, and the design of optical systems using curved mirrors.",
     ],
   },
 
   figure108: {
     id: "figure108",
-    title: "Physics Figure 10.8",
+    title: "Formation of Image by a Convex Mirror",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-108-7ac3f709ef5f4258852549ea4fc29745",
     embedUrl:
       "https://sketchfab.com/models/7ac3f709ef5f4258852549ea4fc29745/embed",
     description: [
-      "• A physics model demonstrating oscillatory or periodic motion, possibly showing simple harmonic motion or pendulum systems.",
-      "• Illustrates the relationship between restoring forces and periodic motion, showing how systems naturally oscillate around equilibrium positions.",
-      "• Shows energy exchange between kinetic and potential energy during oscillatory motion, demonstrating conservation of mechanical energy.",
-      "• Demonstrates how frequency, amplitude, and phase relationships characterize different types of oscillatory motion in mechanical systems.",
-      "• Essential for understanding wave motion, vibrations in structures, musical instruments, and timing mechanisms in various applications.",
+      "• A comprehensive demonstration of how convex mirrors always form virtual, upright, and diminished images regardless of object position.",
+      "• Shows the construction of ray diagrams using principal rays that appear to diverge from the virtual focal point behind the mirror.",
+      "• Illustrates how convex mirrors provide a wider field of view compared to plane mirrors, making them ideal for safety and surveillance applications.",
+      "• Demonstrates the consistent image characteristics: virtual images that cannot be projected on a screen but can be seen by the eye.",
+      "• Essential for understanding applications in vehicle side mirrors, store security mirrors, traffic mirrors, and optical systems requiring wide-angle viewing.",
     ],
   },
 
   figure109: {
     id: "figure109",
-    title: "Physics Figure 10.9",
+    title: "The New Cartesian Sign Convention for Spherical Mirrors",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-109-f447aea9b1924d09b5bfa767ce9593cb",
     embedUrl:
       "https://sketchfab.com/models/f447aea9b1924d09b5bfa767ce9593cb/embed",
     description: [
-      "• A complex physics model showing advanced mechanical motion concepts, potentially including coupled oscillators or resonance phenomena.",
-      "• Demonstrates how multiple oscillating systems can interact and influence each other's motion through mechanical or energy coupling.",
-      "• Shows resonance effects where external forces at specific frequencies can dramatically amplify the amplitude of oscillatory motion.",
-      "• Illustrates damping effects and how real-world friction and resistance affect the behavior of oscillating mechanical systems.",
-      "• Critical for understanding structural engineering, where resonance can be either beneficial (musical instruments) or destructive (building collapse).",
+      "• A fundamental reference system demonstrating the standardized sign conventions used in spherical mirror calculations and analysis.",
+      "• Shows how distances are measured: object distance (u), image distance (v), and focal length (f) with specific positive and negative assignments.",
+      "• Illustrates the pole as origin, with distances measured along the principal axis, and heights measured perpendicular to the principal axis.",
+      "• Demonstrates how this convention ensures consistency in mirror equations: 1/f = 1/u + 1/v and magnification calculations.",
+      "• Essential for solving mirror problems systematically, avoiding sign errors, and maintaining consistency across different optical scenarios and textbooks.",
     ],
   },
 
   figure1011: {
     id: "figure1011",
-    title: "Physics Figure 10.11",
+    title: "Refraction of Light by Glass",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1011-32ebf975476349c893cf8040ae0e3b3d",
     embedUrl:
       "https://sketchfab.com/models/32ebf975476349c893cf8040ae0e3b3d/embed",
     description: [
-      "• An advanced physics model demonstrating sophisticated mechanical systems, possibly including wave motion or fluid dynamics principles.",
-      "• Shows how wave properties like wavelength, frequency, and amplitude affect the behavior of mechanical waves in different media.",
-      "• Illustrates wave interference patterns, showing how waves can constructively or destructively interfere when they overlap.",
-      "• Demonstrates practical applications of wave physics in acoustics, seismology, and communication systems that rely on wave propagation.",
-      "• Essential for understanding sound waves, earthquake analysis, radio communications, and other technologies based on wave phenomena.",
+      "• A fundamental demonstration of how light bends when passing from air into glass and back to air, showing the principles of refraction.",
+      "• Illustrates Snell's law in action as light changes direction due to the different optical densities of air and glass materials.",
+      "• Shows how the refractive index of glass affects the bending angle, with light slowing down in the denser glass medium.",
+      "• Demonstrates the reversible nature of refraction and how light rays emerge parallel to their original direction after passing through parallel-sided glass.",
+      "• Essential for understanding optical devices like lenses, prisms, windows, and fiber optics where light transmission through glass is fundamental.",
     ],
   },
 

@@ -47,32 +47,32 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.5",
+      title: "Center of Curvature Ray Reflection",
       modelId: "figure105",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.6",
+      title: "Oblique Ray Reflection at Mirror Pole",
       modelId: "figure106",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.7",
+      title: "Ray Diagrams for Concave Mirror Image Formation",
       modelId: "figure107",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.8",
+      title: "Formation of Image by a Convex Mirror",
       modelId: "figure108",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.9",
+      title: "The New Cartesian Sign Convention for Spherical Mirrors",
       modelId: "figure109",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.11",
+      title: "Refraction of Light by Glass",
       modelId: "figure1011",
       hasModel: true,
     },
