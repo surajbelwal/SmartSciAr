@@ -33,81 +33,81 @@ export const physicsModels = {
 
   figure121: {
     id: "figure121",
-    title: "Physics Figure 12.1",
+    title: "Electric Circuit",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/fig-121-c57bf740c17741b8aa0ba488b248e93a",
     embedUrl:
       "https://sketchfab.com/models/c57bf740c17741b8aa0ba488b248e93a/embed",
     description: [
-      "• A specific physics demonstration model illustrating key concepts from chapter 12 of physics curriculum, likely related to waves, oscillations, or thermodynamics.",
-      "• Shows three-dimensional visualization of abstract physics concepts, making complex theoretical principles more accessible through visual representation.",
-      "• Demonstrates the relationship between mathematical equations and physical phenomena, helping students connect theoretical knowledge with practical applications.",
-      "• Illustrates how physics principles can be modeled and understood through interactive three-dimensional representations rather than just mathematical formulas.",
-      "• Essential for visual learners to grasp complex physics concepts and understand how theoretical principles manifest in real-world scenarios.",
+      "• A fundamental electric circuit model demonstrating the flow of electrical current through various components including resistors, capacitors, and conductors.",
+      "• Shows how electrical energy moves through a closed loop circuit, illustrating Ohm's law and the relationship between voltage, current, and resistance.",
+      "• Demonstrates series and parallel circuit configurations, showing how different arrangements affect current flow and voltage distribution throughout the circuit.",
+      "• Illustrates basic circuit analysis principles including Kirchhoff's current and voltage laws, essential for understanding complex electrical systems.",
+      "• Foundation for understanding all electrical devices, from simple household appliances to complex electronic systems and power distribution networks.",
     ],
   },
 
   figure1010: {
     id: "figure1010",
-    title: "Physics Figure 10.10",
+    title: "Refraction of Light",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1010-f8235cd871d9401ea444d487c1bf23b1",
     embedUrl:
       "https://sketchfab.com/models/f8235cd871d9401ea444d487c1bf23b1/embed",
     description: [
-      "• A detailed physics model from chapter 10 curriculum, potentially demonstrating rotational motion, angular momentum, or mechanical systems.",
-      "• Shows the three-dimensional nature of rotational dynamics, including concepts like torque, angular velocity, and moment of inertia in mechanical systems.",
-      "• Illustrates how rotational motion differs from linear motion, with unique properties like angular acceleration and the relationship between force and rotation.",
-      "• Demonstrates practical applications of rotational physics in machinery, engines, gyroscopes, and other rotating mechanical devices.",
-      "• Essential for understanding advanced mechanics, including the behavior of spinning objects, conservation of angular momentum, and rotational equilibrium.",
+      "• A fundamental optics model demonstrating how light bends when passing from one transparent medium to another with different optical densities.",
+      "• Shows Snell's law in action, illustrating the mathematical relationship between incident and refracted angles based on the refractive indices of materials.",
+      "• Demonstrates how light speed changes in different media, causing the characteristic bending effect that creates optical illusions and enables lens functionality.",
+      "• Illustrates practical applications including eyeglasses, camera lenses, microscopes, telescopes, and fiber optic communications systems.",
+      "• Essential for understanding wave optics, optical instruments, and how the human eye focuses light to create clear vision on the retina.",
     ],
   },
 
   figure102: {
     id: "figure102",
-    title: "Physics Figure 10.2",
+    title: "Concave and Convex Mirror",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-102-6393720a90f04af691d1437ea6b73a41",
     embedUrl:
       "https://sketchfab.com/models/6393720a90f04af691d1437ea6b73a41/embed",
     description: [
-      "• An early chapter 10 physics model demonstrating fundamental concepts of rotational motion and angular mechanics in three-dimensional space.",
-      "• Shows basic principles of circular motion, including the relationship between linear and angular quantities like velocity, acceleration, and displacement.",
-      "• Illustrates how objects move in circular paths and the forces required to maintain such motion, including centripetal and centrifugal effects.",
-      "• Demonstrates the foundation concepts necessary for understanding more complex rotational phenomena and mechanical systems.",
-      "• Critical for building understanding of rotational kinematics before progressing to more advanced topics like rotational dynamics and angular momentum.",
+      "• A comprehensive mirror optics model demonstrating how concave and convex mirrors reflect light differently to form various types of images.",
+      "• Shows how concave mirrors converge light rays to form real or virtual images, depending on object distance from the focal point.",
+      "• Illustrates how convex mirrors diverge light rays to always form virtual, upright, and diminished images regardless of object position.",
+      "• Demonstrates practical applications including car rearview mirrors, telescope reflectors, dental mirrors, security mirrors, and solar concentrators.",
+      "• Essential for understanding geometric optics, image formation, focal length concepts, and the mirror equation used in optical calculations.",
     ],
   },
 
   figure103: {
     id: "figure103",
-    title: "Physics Figure 10.3",
+    title: "Parallel Rays Through Concave Mirror",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-103-260e99896c2f4744a7385a30b8001c73",
     embedUrl:
       "https://sketchfab.com/models/260e99896c2f4744a7385a30b8001c73/embed",
     description: [
-      "• A physics demonstration model showing progression in rotational motion concepts, building upon basic circular motion principles.",
-      "• Illustrates more complex rotational scenarios, potentially including variable angular velocity or the effects of changing rotational parameters.",
-      "• Shows how rotational motion can be analyzed using both geometric and algebraic approaches, connecting visual understanding with mathematical analysis.",
-      "• Demonstrates real-world applications of rotational physics in mechanical devices, vehicles, and natural phenomena like planetary motion.",
-      "• Essential for developing intuitive understanding of how objects behave when undergoing rotational motion in various physical contexts.",
+      "• A detailed ray diagram demonstrating how parallel light rays incident on a concave mirror converge at the principal focus point.",
+      "• Shows the fundamental principle that all parallel rays striking a concave mirror reflect through the focal point, regardless of where they hit the mirror surface.",
+      "• Illustrates the relationship between the mirror's curvature, focal length, and the convergence behavior of reflected light rays.",
+      "• Demonstrates how this focusing property is utilized in applications like reflecting telescopes, satellite dishes, and solar concentrators.",
+      "• Essential for understanding geometric optics, mirror equations, and the design principles behind optical instruments that collect and focus light.",
     ],
   },
 
   figure104: {
     id: "figure104",
-    title: "Physics Figure 10.4",
+    title: "Focal Ray Reflection in Mirrors",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-104-e4d32137fadd4ae99d9fbfebeed131f1",
     embedUrl:
       "https://sketchfab.com/models/e4d32137fadd4ae99d9fbfebeed131f1/embed",
     description: [
-      "• An intermediate rotational physics model demonstrating more sophisticated concepts in angular motion and mechanical rotation systems.",
-      "• Shows the relationship between torque and angular acceleration, illustrating how rotational forces create changes in rotational motion.",
-      "• Demonstrates the concept of moment of inertia and how the distribution of mass affects an object's resistance to rotational acceleration.",
-      "• Illustrates practical applications in engineering systems where controlled rotational motion is essential for proper mechanical function.",
-      "• Important for understanding how rotational systems can be designed, controlled, and optimized in mechanical and electrical engineering applications.",
+      "• A fundamental ray optics demonstration showing how rays passing through or directed toward the principal focus reflect parallel to the principal axis.",
+      "• Illustrates the reversible nature of light paths: for concave mirrors, rays through the focus emerge parallel, while parallel rays converge to the focus.",
+      "• Shows the complementary behavior in convex mirrors where rays directed toward the virtual focus behind the mirror reflect parallel to the principal axis.",
+      "• Demonstrates the principle of reciprocity in geometric optics, which is fundamental to understanding how optical instruments form images.",
+      "• Essential for analyzing ray diagrams, predicting image formation, and designing optical systems like telescopes, microscopes, and camera lenses.",
     ],
   },
 

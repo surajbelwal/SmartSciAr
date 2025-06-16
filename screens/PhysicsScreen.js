@@ -22,27 +22,27 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Physics Figure 12.1",
+      title: "Electric Circuit",
       modelId: "figure121",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.10",
+      title: "Refraction of Light",
       modelId: "figure1010",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.2",
+      title: "Concave and Convex Mirror",
       modelId: "figure102",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.3",
+      title: "Parallel Rays Through Concave Mirror",
       modelId: "figure103",
       hasModel: true,
     },
     {
-      title: "Physics Figure 10.4",
+      title: "Focal Ray Reflection in Mirrors",
       modelId: "figure104",
       hasModel: true,
     },
