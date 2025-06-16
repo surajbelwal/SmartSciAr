@@ -369,81 +369,82 @@ export const physicsModels = {
 
   figure114: {
     id: "figure114",
-    title: "Physics Figure 11.4",
+    title: "Refraction of Light Through a Triangular Glass Prism",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-114-9585769059c2471d9f700387ab02333c",
     embedUrl:
       "https://sketchfab.com/models/9585769059c2471d9f700387ab02333c/embed",
     description: [
-      "• An advanced electromagnetic model showing complex field configurations and their effects on charged particles and current systems.",
-      "• Demonstrates how electromagnetic fields can be shaped and controlled using conductors, dielectrics, and magnetic materials.",
-      "• Shows applications in electromagnetic shielding, antenna design, and devices that require precise control of electromagnetic field patterns.",
-      "• Illustrates the behavior of charged particles in electromagnetic fields, important for understanding particle accelerators and electron beam devices.",
-      "• Critical for understanding advanced electromagnetic applications including MRI machines, particle physics experiments, and electromagnetic compatibility.",
+      "• A fundamental demonstration of light refraction through a triangular glass prism, showing how light bends at each interface due to changing optical density.",
+      "• Illustrates the application of Snell's law at both the entry and exit surfaces of the prism, with light bending toward the normal when entering glass.",
+      "• Shows the total deviation of light ray, which depends on the prism material's refractive index, apex angle, and the angle of incidence.",
+      "• Demonstrates the principle of minimum deviation, where the light ray passes symmetrically through the prism for maximum efficiency.",
+      "• Essential for understanding prism optics, spectroscopy instruments, periscopes, and optical devices that use prisms for light direction control.",
     ],
   },
 
   figure115: {
     id: "figure115",
-    title: "Physics Figure 11.5",
+    title: "Dispersion of White Light by the Glass Prism",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-115-bc72f1c2f7df4dda8552f583ad527a58",
     embedUrl:
       "https://sketchfab.com/models/bc72f1c2f7df4dda8552f583ad527a58/embed",
     description: [
-      "• An electromagnetic physics model demonstrating circuit behavior, possibly including AC circuits, impedance, or electromagnetic compatibility.",
-      "• Shows how alternating current creates time-varying electromagnetic fields that affect circuit behavior and component interactions.",
-      "• Illustrates concepts like inductance, capacitance, and resistance in AC circuits, showing how these affect signal transmission and power delivery.",
-      "• Demonstrates electromagnetic interference and compatibility issues that arise in complex electronic systems and communication devices.",
-      "• Essential for understanding modern electronics, including power systems, signal processing, and high-frequency communication circuits.",
+      "• A spectacular demonstration of white light dispersion, showing how a glass prism separates white light into its component colors of the visible spectrum.",
+      "• Illustrates that white light contains all colors from violet to red, each with different wavelengths and slightly different refractive indices in glass.",
+      "• Shows the formation of the visible spectrum: violet, indigo, blue, green, yellow, orange, and red (VIBGYOR) due to wavelength-dependent refraction.",
+      "• Demonstrates how shorter wavelengths (violet/blue) bend more than longer wavelengths (red) due to higher refractive indices for shorter wavelengths.",
+      "• Essential for understanding spectroscopy, color theory, rainbow formation, and optical instruments that analyze light composition and wavelength properties.",
     ],
   },
 
   figure116: {
     id: "figure116",
-    title: "Physics Figure 11.6",
+    title: "Recombination of the Spectrum of White Light",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-116-a48848c2a7ce4ffc9f5ce50481c71797",
     embedUrl:
       "https://sketchfab.com/models/a48848c2a7ce4ffc9f5ce50481c71797/embed",
     description: [
-      "• An advanced electromagnetic model showing electromagnetic wave interactions with matter, including reflection, absorption, and transmission.",
-      "• Demonstrates how electromagnetic waves behave differently when encountering various materials, depending on their electrical and magnetic properties.",
-      "• Shows applications in electromagnetic wave absorbers, reflectors, and filters used in communication systems and electromagnetic compatibility.",
-      "• Illustrates the physics behind radar cross-section, stealth technology, and electromagnetic shielding effectiveness.",
-      "• Critical for understanding antenna design, electromagnetic compatibility testing, and the interaction of electromagnetic fields with biological tissues.",
+      "• A fascinating demonstration showing how the separated colors of the spectrum can be recombined to form white light again using another prism or lens.",
+      "• Illustrates the reversible nature of light dispersion, proving that white light is indeed composed of all the colors of the visible spectrum.",
+      "• Shows how a converging lens or second prism can bring together the dispersed colors (VIBGYOR) to reconstruct the original white light beam.",
+      "• Demonstrates Newton's famous experiment that established the fundamental nature of white light and the principle of color addition.",
+      "• Essential for understanding color mixing, additive color systems, display technologies, and the wave nature of light in optical applications.",
     ],
   },
 
   figure118: {
     id: "figure118",
-    title: "Physics Figure 11.8",
+    title: "Rainbow Formation",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-118-161925360de84eec95c6217620e3c181",
     embedUrl:
       "https://sketchfab.com/models/161925360de84eec95c6217620e3c181/embed",
     description: [
-      "• A comprehensive electromagnetic model demonstrating complex electromagnetic phenomena, possibly including waveguides or transmission lines.",
-      "• Shows how electromagnetic waves can be guided and controlled using specially designed structures like waveguides and transmission lines.",
-      "• Illustrates impedance matching concepts that are crucial for efficient power transfer and signal transmission in electromagnetic systems.",
-      "• Demonstrates applications in microwave technology, fiber optics, and high-frequency communication systems used in modern telecommunications.",
-      "• Essential for understanding advanced electromagnetic applications including satellite communications, radar systems, and optical fiber networks.",
+      "• A beautiful natural phenomenon demonstrating how rainbows form through the combined processes of refraction, dispersion, and total internal reflection in water droplets.",
+      "• Illustrates how sunlight enters spherical water droplets, undergoes dispersion into component colors, reflects internally, and emerges to create the rainbow spectrum.",
+      "• Shows the specific geometry required for rainbow observation: sun behind the observer, water droplets in front, with the rainbow appearing at a 42-degree angle.",
+      "• Demonstrates primary and secondary rainbow formation, explaining why secondary rainbows have reversed color order and appear fainter.",
+      "• Essential for understanding atmospheric optics, the physics of natural light phenomena, and how dispersion creates spectacular displays in nature.",
     ],
   },
 
   figure1111: {
     id: "figure1111",
-    title: "Physics Figure 11.11",
+    title:
+      "An Arrangement for Observing Scattering of Light in Colloidal Solution",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1111-491d92d6ffb04912a0ff9deecada3ef9",
     embedUrl:
       "https://sketchfab.com/models/491d92d6ffb04912a0ff9deecada3ef9/embed",
     description: [
-      "• An advanced electromagnetic physics model demonstrating sophisticated electromagnetic phenomena and their technological applications.",
-      "• Shows complex electromagnetic field patterns and their interactions in advanced technological systems and research applications.",
-      "• Illustrates cutting-edge electromagnetic applications including electromagnetic levitation, plasma physics, and advanced communication systems.",
-      "• Demonstrates the physics behind emerging technologies like wireless power transfer, electromagnetic pulse effects, and electromagnetic metamaterials.",
-      "• Critical for understanding future electromagnetic technologies and research frontiers in physics and electrical engineering applications.",
+      "• A demonstration of the Tyndall effect, showing how light scatters when passing through a colloidal solution containing suspended particles.",
+      "• Illustrates how particles in colloidal solutions scatter light, making the light beam visible when viewed from the side due to Rayleigh scattering.",
+      "• Shows the experimental setup with a light source, colloidal solution, and observation system to study light scattering phenomena.",
+      "• Demonstrates how particle size affects scattering: smaller particles scatter blue light more than red light, explaining why the sky appears blue.",
+      "• Essential for understanding atmospheric optics, why sunsets are red, how microscopes detect small particles, and applications in particle size analysis.",
     ],
   },
 };

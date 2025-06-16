@@ -127,27 +127,28 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.4",
+      title: "Refraction of Light Through a Triangular Glass Prism",
       modelId: "figure114",
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.5",
+      title: "Dispersion of White Light by the Glass Prism",
       modelId: "figure115",
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.6",
+      title: "Recombination of the Spectrum of White Light",
       modelId: "figure116",
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.8",
+      title: "Rainbow Formation",
       modelId: "figure118",
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.11",
+      title:
+        "An Arrangement for Observing Scattering of Light in Colloidal Solution",
       modelId: "figure1111",
       hasModel: true,
     },
