@@ -209,113 +209,113 @@ export const physicsModels = {
 
   figure1012: {
     id: "figure1012",
-    title: "Physics Figure 10.12",
+    title: "Converging and Diverging Action of Lenses",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1012-727c1f68e0544932b82060b0625ff51c",
     embedUrl:
       "https://sketchfab.com/models/727c1f68e0544932b82060b0625ff51c/embed",
     description: [
-      "• A physics demonstration model showing wave propagation characteristics and the behavior of mechanical waves in various media.",
-      "• Illustrates how wave speed depends on the properties of the medium, including density, elasticity, and other material characteristics.",
-      "• Shows wave reflection and transmission at boundaries between different media, explaining how waves behave at interfaces.",
-      "• Demonstrates standing wave patterns that form when waves interfere with their reflections, creating nodes and antinodes.",
-      "• Important for understanding musical instrument design, architectural acoustics, and seismic wave analysis in geological studies.",
+      "• A fundamental lens optics demonstration showing how convex lenses converge parallel light rays to a focal point and concave lenses diverge them.",
+      "• Illustrates the converging action of convex (positive) lenses where parallel rays meet at the principal focus on the opposite side of the lens.",
+      "• Shows the diverging action of concave (negative) lenses where parallel rays appear to diverge from a virtual focus on the same side as the incident light.",
+      "• Demonstrates how lens curvature and refractive index determine the focal length and the strength of converging or diverging action.",
+      "• Essential for understanding optical instruments like cameras, telescopes, microscopes, eyeglasses, and any device that uses lenses to focus or spread light.",
     ],
   },
 
   figure1013: {
     id: "figure1013",
-    title: "Physics Figure 10.13",
+    title: "Principal Axis Ray Refraction in Lenses",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1013-5432d8b8667c4f8bbe63c8f9415d436c",
     embedUrl:
       "https://sketchfab.com/models/5432d8b8667c4f8bbe63c8f9415d436c/embed",
     description: [
-      "• An advanced wave physics model demonstrating complex wave behaviors including diffraction, dispersion, and wave packet formation.",
-      "• Shows how waves bend around obstacles and spread out when passing through openings, demonstrating the wave nature of various phenomena.",
-      "• Illustrates how different frequency components of a wave can travel at different speeds, causing wave packet spreading and pulse broadening.",
-      "• Demonstrates applications in telecommunications, where understanding wave behavior is crucial for signal transmission and reception.",
-      "• Essential for understanding modern physics concepts like quantum mechanics, where wave-particle duality requires deep understanding of wave properties.",
+      "• A fundamental lens ray diagram showing how parallel rays to the principal axis behave differently in convex and concave lenses.",
+      "• Demonstrates that parallel rays passing through a convex lens converge and pass through the principal focus on the opposite side of the lens.",
+      "• Shows how parallel rays in a concave lens appear to diverge from the virtual principal focus located on the same side as the incident light.",
+      "• Illustrates the first principal ray rule used in constructing ray diagrams for both converging and diverging lenses.",
+      "• Essential for understanding lens behavior, ray diagram construction, and the fundamental principles behind all lens-based optical instruments and vision correction.",
     ],
   },
 
   figure1014: {
     id: "figure1014",
-    title: "Physics Figure 10.14",
+    title: "Focal Ray Refraction in Lenses",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1014-538ce7929a8f4ef1a484e822acb571e1",
     embedUrl:
       "https://sketchfab.com/models/538ce7929a8f4ef1a484e822acb571e1/embed",
     description: [
-      "• A comprehensive wave physics model showing the complete behavior of mechanical waves in complex systems and environments.",
-      "• Demonstrates three-dimensional wave propagation, showing how waves spread in all directions from point sources and line sources.",
-      "• Illustrates Doppler effect phenomena, where the frequency of waves changes due to relative motion between source and observer.",
-      "• Shows practical applications in radar, sonar, medical ultrasound, and other technologies that rely on wave reflection and frequency analysis.",
-      "• Critical for understanding how wave physics applies to real-world detection, measurement, and communication systems.",
+      "• A fundamental lens ray diagram demonstrating how rays passing through or directed toward the principal focus emerge parallel to the principal axis.",
+      "• Shows that rays passing through the principal focus of a convex lens emerge parallel to the principal axis after refraction.",
+      "• Illustrates how rays directed toward the virtual principal focus of a concave lens also emerge parallel to the principal axis after refraction.",
+      "• Demonstrates the second principal ray rule used in lens ray diagram construction, complementing the parallel ray behavior.",
+      "• Essential for understanding the reversible nature of light paths in lenses and the systematic approach to predicting image formation in optical systems.",
     ],
   },
 
   figure1015: {
     id: "figure1015",
-    title: "Physics Figure 10.15",
+    title: "Ray Through Optical Center of Lens",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1015-88b9546089c64eb1bdc31cc47ca8ce4e",
     embedUrl:
       "https://sketchfab.com/models/88b9546089c64eb1bdc31cc47ca8ce4e/embed",
     description: [
-      "• An advanced physics model demonstrating thermodynamic principles, possibly including heat transfer, fluid flow, or energy conversion systems.",
-      "• Shows how thermal energy moves through different materials via conduction, convection, and radiation heat transfer mechanisms.",
-      "• Illustrates the relationship between temperature, pressure, and volume in gases, demonstrating fundamental thermodynamic state relationships.",
-      "• Demonstrates practical applications in engines, refrigeration systems, power plants, and other devices that convert thermal energy.",
-      "• Essential for understanding energy efficiency, environmental impact of thermal systems, and the fundamental limits of energy conversion processes.",
+      "• A fundamental lens ray diagram demonstrating that light rays passing through the optical center of a lens emerge without any deviation.",
+      "• Shows this undeviated ray behavior applies to both convex and concave lenses, regardless of the lens curvature or refractive index.",
+      "• Illustrates the third principal ray rule used in lens ray diagram construction, where the ray continues in a straight line through the optical center.",
+      "• Demonstrates that at the optical center, the lens surfaces are nearly parallel, so the ray enters and exits at the same angle, resulting in no net deviation.",
+      "• Essential for systematic ray diagram construction and understanding how the optical center serves as a reference point for analyzing lens image formation.",
     ],
   },
 
   figure1016: {
     id: "figure1016",
-    title: "Physics Figure 10.16",
+    title: "Image Formation by Convex Lens for Various Object Positions",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1016-8fb5ca6979c94941b67dce6273172734",
     embedUrl:
       "https://sketchfab.com/models/8fb5ca6979c94941b67dce6273172734/embed",
     description: [
-      "• A thermodynamics model showing energy flow and heat engine cycles, demonstrating how thermal energy can be converted to mechanical work.",
-      "• Illustrates the Carnot cycle and other ideal thermodynamic cycles that represent the theoretical limits of heat engine efficiency.",
-      "• Shows entropy changes during thermodynamic processes, explaining why heat engines cannot achieve 100% efficiency according to the second law.",
-      "• Demonstrates practical heat engine applications including automotive engines, power plant turbines, and refrigeration systems.",
-      "• Critical for understanding energy policy, environmental impact of energy conversion, and the development of more efficient thermal systems.",
+      "• A comprehensive demonstration showing how convex lenses form different types of images depending on object distance from the lens.",
+      "• Illustrates six different object positions: at infinity, beyond 2F, at 2F, between F and 2F, at F, and between F and lens.",
+      "• Shows how image characteristics (real/virtual, upright/inverted, magnified/diminished) change systematically with object position.",
+      "• Demonstrates practical applications including cameras, projectors, magnifying glasses, telescopes, and microscopes based on object placement.",
+      "• Essential for understanding lens formula calculations, magnification relationships, and the design principles of optical instruments using convex lenses.",
     ],
   },
 
   figure1017: {
     id: "figure1017",
-    title: "Physics Figure 10.17",
+    title: "Image Formation by Concave Lens",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1017-0bbce9ba79ae4b22ad880e745d92c5ee",
     embedUrl:
       "https://sketchfab.com/models/0bbce9ba79ae4b22ad880e745d92c5ee/embed",
     description: [
-      "• An advanced thermodynamics model demonstrating complex thermal systems, possibly including phase transitions or multi-component systems.",
-      "• Shows how matter changes between solid, liquid, and gas phases, including the energy requirements and molecular behavior during transitions.",
-      "• Illustrates critical point phenomena and phase diagrams, showing how pressure and temperature affect the state of matter.",
-      "• Demonstrates applications in materials science, including crystal growth, metallurgy, and the production of advanced materials.",
-      "• Essential for understanding weather systems, geological processes, and industrial processes that involve phase changes and thermal management.",
+      "• A comprehensive demonstration showing how concave lenses always form virtual, upright, and diminished images regardless of object position.",
+      "• Illustrates that concave lenses consistently produce the same type of image characteristics: virtual images that cannot be projected on a screen.",
+      "• Shows how the image position and size vary with object distance, but the nature remains virtual, upright, and smaller than the object.",
+      "• Demonstrates practical applications in eyeglasses for myopia correction, peepholes, cameras with wide-angle capabilities, and optical instruments requiring field expansion.",
+      "• Essential for understanding diverging lens behavior, lens formula applications for negative focal lengths, and the design of corrective optical systems.",
     ],
   },
 
   figure32: {
     id: "figure32",
-    title: "Physics Figure 3.2",
+    title: "Electrical Conductivity of Metals",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-32-24f0ecc94045433fa1a2018a9b18b5ad",
     embedUrl:
       "https://sketchfab.com/models/24f0ecc94045433fa1a2018a9b18b5ad/embed",
     description: [
-      "• A fundamental physics model from chapter 3, likely demonstrating basic concepts of motion, forces, or energy in mechanical systems.",
-      "• Shows vector quantities and their graphical representation in three-dimensional space, essential for understanding force and motion analysis.",
-      "• Illustrates how multiple forces combine according to vector addition rules, determining the net effect on object motion.",
-      "• Demonstrates Newton's laws of motion in practical scenarios, showing how forces cause acceleration and changes in motion.",
-      "• Foundation for understanding all subsequent physics topics, including energy, momentum, rotational motion, and more advanced mechanical concepts.",
+      "• A fundamental demonstration showing why metals are excellent conductors of electricity due to their atomic structure and free electron behavior.",
+      "• Illustrates how metallic bonding creates a 'sea of electrons' that can move freely through the metal lattice, enabling electrical conduction.",
+      "• Shows the difference between conductors, semiconductors, and insulators based on their electron band structure and availability of free charge carriers.",
+      "• Demonstrates practical applications in electrical wiring, electronic components, power transmission, and all electrical devices that rely on metallic conductors.",
+      "• Essential for understanding electrical circuits, current flow, resistance, and the fundamental principles behind all electrical and electronic technology.",
     ],
   },
 
