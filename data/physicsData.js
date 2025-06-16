@@ -1,17 +1,17 @@
 export const physicsModels = {
   decoration: {
     id: "decoration",
-    title: "Physics Decoration Model",
+    title: "Newton's Cradle",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/decoration-5a0ea75cd5834fffaf1d8f72891d8df1",
     embedUrl:
       "https://sketchfab.com/models/5a0ea75cd5834fffaf1d8f72891d8df1/embed",
     description: [
-      "• A decorative physics model demonstrating fundamental principles of symmetry, balance, and geometric relationships in three-dimensional space.",
-      "• Illustrates concepts of spatial arrangement and how physical objects can exhibit both aesthetic appeal and scientific significance through their design.",
-      "• Shows the relationship between form and function in physics, where decorative elements often follow natural laws of proportion and structural stability.",
-      "• Demonstrates how physics principles like center of mass, equilibrium, and structural integrity apply to both functional and artistic objects.",
-      "• Understanding decorative physics helps bridge the gap between scientific principles and real-world applications in architecture, design, and engineering.",
+      "• A classic demonstration of conservation of momentum and energy using five identical pendulum balls suspended in a line.",
+      "• Shows how lifting and releasing one ball transfers momentum through the stationary balls, causing the ball on the opposite end to swing out.",
+      "• Illustrates Newton's laws of motion, particularly the conservation of momentum where momentum is transferred without the middle balls moving visibly.",
+      "• Demonstrates elastic collision principles where kinetic energy passes through the system with minimal loss during impact.",
+      "• Essential for understanding momentum transfer, collision physics, and how energy propagates through connected systems in mechanical physics.",
     ],
   },
 
@@ -434,7 +434,7 @@ export const physicsModels = {
   figure1111: {
     id: "figure1111",
     title:
-      "An Arrangement for Observing Scattering of Light in Colloidal Solution",
+      "Observing Scattering of Light in Colloidal Solution",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-1111-491d92d6ffb04912a0ff9deecada3ef9",
     embedUrl:

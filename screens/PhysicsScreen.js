@@ -12,7 +12,7 @@ import { StatusBar } from "expo-status-bar";
 export default function PhysicsScreen({ navigation }) {
   const physicsTopics = [
     {
-      title: "Physics Decoration Model",
+      title: "Newton's Cradle",
       modelId: "decoration",
       hasModel: true,
     },
@@ -148,7 +148,7 @@ export default function PhysicsScreen({ navigation }) {
     },
     {
       title:
-        "An Arrangement for Observing Scattering of Light in Colloidal Solution",
+        "Observing Scattering of Light in Colloidal Solution",
       modelId: "figure1111",
       hasModel: true,
     },
