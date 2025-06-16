@@ -112,17 +112,17 @@ export default function PhysicsScreen({ navigation }) {
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.1",
+      title: "The Human Eye",
       modelId: "figure111",
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.2",
+      title: "Myopia and Its Correction with Concave Lens",
       modelId: "figure112",
       hasModel: true,
     },
     {
-      title: "Physics Figure 11.3",
+      title: "Hypermetropia and Its Correction with Convex Lens",
       modelId: "figure113",
       hasModel: true,
     },

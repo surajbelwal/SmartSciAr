@@ -321,49 +321,49 @@ export const physicsModels = {
 
   figure111: {
     id: "figure111",
-    title: "Physics Figure 11.1",
+    title: "The Human Eye",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-111-df7ccfbd24664b8c9ffb1055d8494850",
     embedUrl:
       "https://sketchfab.com/models/df7ccfbd24664b8c9ffb1055d8494850/embed",
     description: [
-      "• An introductory chapter 11 physics model, possibly demonstrating electromagnetic phenomena, electric fields, or magnetic field interactions.",
-      "• Shows the invisible electric or magnetic field patterns that surround charged particles and current-carrying conductors.",
-      "• Illustrates how field lines represent the direction and strength of electromagnetic fields in three-dimensional space.",
-      "• Demonstrates the fundamental forces that govern electrical devices, motors, generators, and electronic communication systems.",
-      "• Essential foundation for understanding all electrical technology, from simple circuits to complex electromagnetic devices and wireless communications.",
+      "• A detailed anatomical model of the human eye showing its optical components and how they work together to form clear images on the retina.",
+      "• Illustrates the eye's refractive elements: cornea, aqueous humor, crystalline lens, and vitreous humor that bend light to focus images.",
+      "• Shows the accommodation process where the ciliary muscles change lens curvature to focus on objects at different distances.",
+      "• Demonstrates how the iris controls light entry, the retina converts light to neural signals, and the optic nerve transmits visual information to the brain.",
+      "• Essential for understanding vision defects like myopia, hyperopia, astigmatism, and how corrective lenses and surgical procedures restore clear vision.",
     ],
   },
 
   figure112: {
     id: "figure112",
-    title: "Physics Figure 11.2",
+    title: "Myopia and Its Correction with Concave Lens",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-112-1417fbd0ed1e4a369fccfcfdd45f807f",
     embedUrl:
       "https://sketchfab.com/models/1417fbd0ed1e4a369fccfcfdd45f807f/embed",
     description: [
-      "• An electromagnetic physics model showing the interaction between electric and magnetic fields, demonstrating fundamental field relationships.",
-      "• Illustrates how moving electric charges create magnetic fields, and how changing magnetic fields can induce electric currents.",
-      "• Shows the unified nature of electromagnetic phenomena, where electricity and magnetism are different aspects of the same fundamental force.",
-      "• Demonstrates applications in electric motors, generators, transformers, and other devices that convert between electrical and mechanical energy.",
-      "• Critical for understanding electromagnetic induction, the principle behind most electrical power generation and many electronic devices.",
+      "• A detailed demonstration of myopia (near-sightedness) showing how the myopic eye focuses distant objects in front of the retina instead of on it.",
+      "• Illustrates the anatomical causes of myopia: either an elongated eyeball or excessive curvature of the cornea and lens system.",
+      "• Shows how parallel rays from distant objects converge before reaching the retina, creating blurred vision for far objects while near vision remains clear.",
+      "• Demonstrates the optical correction using a concave (diverging) lens that spreads incoming light rays before they enter the eye.",
+      "• Essential for understanding vision correction, eyeglass prescriptions, contact lenses, and refractive surgery procedures for myopia treatment.",
     ],
   },
 
   figure113: {
     id: "figure113",
-    title: "Physics Figure 11.3",
+    title: "Hypermetropia and Its Correction with Convex Lens",
     sketchfabUrl:
       "https://sketchfab.com/3d-models/figure-113-133d604eaa874f45a049df8d27b46002",
     embedUrl:
       "https://sketchfab.com/models/133d604eaa874f45a049df8d27b46002/embed",
     description: [
-      "• An electromagnetic model demonstrating advanced field interactions, possibly including electromagnetic wave generation or propagation.",
-      "• Shows how accelerating electric charges produce electromagnetic waves that travel through space at the speed of light.",
-      "• Illustrates the relationship between electric and magnetic field oscillations in electromagnetic waves, showing their perpendicular orientations.",
-      "• Demonstrates applications in radio, television, cell phone communications, and other wireless technologies that rely on electromagnetic waves.",
-      "• Essential for understanding how electromagnetic radiation carries energy and information across vast distances in space and communication systems.",
+      "• A detailed demonstration of hypermetropia (far-sightedness) showing how the hypermetropic eye focuses near objects behind the retina instead of on it.",
+      "• Illustrates the anatomical causes of hypermetropia: either a shortened eyeball or insufficient curvature of the cornea and lens system.",
+      "• Shows how light rays from near objects would converge beyond the retina, creating blurred vision for close objects while distant vision may remain clear.",
+      "• Demonstrates the optical correction using a convex (converging) lens that helps converge incoming light rays before they enter the eye.",
+      "• Essential for understanding vision correction, reading glasses, bifocals, progressive lenses, and refractive surgery procedures for hypermetropia treatment.",
     ],
   },
 
