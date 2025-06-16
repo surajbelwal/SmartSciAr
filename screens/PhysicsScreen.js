@@ -11,22 +11,156 @@ import { StatusBar } from "expo-status-bar";
 
 export default function PhysicsScreen({ navigation }) {
   const physicsTopics = [
-    "Mechanics & Motion",
-    "Forces & Newton's Laws",
-    "Energy & Work",
-    "Waves & Sound",
-    "Light & Optics",
-    "Electricity & Magnetism",
-    "Atomic Structure",
-    "Quantum Physics",
-    "Thermodynamics",
-    "Nuclear Physics",
-    "Relativity",
-    "Electromagnetic Waves",
+    {
+      title: "Physics Decoration Model",
+      modelId: "decoration",
+      hasModel: true,
+    },
+    {
+      title: "Reflection & Refraction Prism",
+      modelId: "prism",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 12.1",
+      modelId: "figure121",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.10",
+      modelId: "figure1010",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.2",
+      modelId: "figure102",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.3",
+      modelId: "figure103",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.4",
+      modelId: "figure104",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.5",
+      modelId: "figure105",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.6",
+      modelId: "figure106",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.7",
+      modelId: "figure107",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.8",
+      modelId: "figure108",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.9",
+      modelId: "figure109",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.11",
+      modelId: "figure1011",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.12",
+      modelId: "figure1012",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.13",
+      modelId: "figure1013",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.14",
+      modelId: "figure1014",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.15",
+      modelId: "figure1015",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.16",
+      modelId: "figure1016",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 10.17",
+      modelId: "figure1017",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 3.2",
+      modelId: "figure32",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.1",
+      modelId: "figure111",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.2",
+      modelId: "figure112",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.3",
+      modelId: "figure113",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.4",
+      modelId: "figure114",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.5",
+      modelId: "figure115",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.6",
+      modelId: "figure116",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.8",
+      modelId: "figure118",
+      hasModel: true,
+    },
+    {
+      title: "Physics Figure 11.11",
+      modelId: "figure1111",
+      hasModel: true,
+    },
   ];
 
   const handleBackToHome = () => {
     navigation.navigate("Home");
+  };
+
+  const handleTopicPress = (topic) => {
+    if (topic.hasModel && topic.modelId) {
+      navigation.navigate("PhysicsModel", { modelId: topic.modelId });
+    }
   };
 
   return (
@@ -63,20 +197,33 @@ export default function PhysicsScreen({ navigation }) {
           {physicsTopics.map((topic, index) => (
             <TouchableOpacity
               key={index}
-              style={styles.topicCard}
+              style={[
+                styles.topicCard,
+                topic.hasModel && styles.topicCardActive,
+              ]}
               activeOpacity={0.8}
+              onPress={() => handleTopicPress(topic)}
             >
               <View style={styles.topicNumber}>
                 <Text style={styles.topicNumberText}>{index + 1}</Text>
               </View>
               <View style={styles.topicContent}>
-                <Text style={styles.topicTitle}>{topic}</Text>
+                <Text style={styles.topicTitle}>{topic.title}</Text>
                 <Text style={styles.topicSubtitle}>
-                  Interactive AR models & simulations
+                  {topic.hasModel
+                    ? "3D model available - Tap to explore!"
+                    : "Coming soon..."}
                 </Text>
               </View>
               <View style={styles.arrowIcon}>
-                <Text style={styles.arrowText}>→</Text>
+                <Text
+                  style={[
+                    styles.arrowText,
+                    topic.hasModel && styles.arrowTextActive,
+                  ]}
+                >
+                  →
+                </Text>
               </View>
             </TouchableOpacity>
           ))}
@@ -208,5 +355,12 @@ const styles = StyleSheet.create({
     color: "#ff6b6b",
     fontSize: 18,
     fontWeight: "bold",
+  },
+  topicCardActive: {
+    backgroundColor: "rgba(255, 107, 107, 0.12)",
+    borderColor: "rgba(255, 107, 107, 0.5)",
+  },
+  arrowTextActive: {
+    color: "#ff8a80",
   },
 });
