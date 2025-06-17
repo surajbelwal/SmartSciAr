@@ -1,12 +1,12 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // You'll need to get your API key from https://makersuite.google.com/app/apikey
-const API_KEY = "YOUR_GEMINI_API_KEY_HERE";
+const API_KEY = "AIzaSyBuFPhqupa4iY6x6ZfUZcrS2vZNaUshtoI";
 
 class AIService {
   constructor() {
     this.genAI = new GoogleGenerativeAI(API_KEY);
-    this.model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+    this.model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   }
 
   // Create topic-specific system prompt
