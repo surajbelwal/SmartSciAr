@@ -236,6 +236,33 @@ const ModelViewer = ({ modelData, navigation }) => {
           </TouchableOpacity>
         </Animated.View>
 
+        {/* Ask AI Button */}
+        <Animated.View
+          style={[
+            styles.aiButtonContainer,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: slideAnim }, { scale: scaleAnim }],
+            },
+          ]}
+        >
+          <TouchableOpacity
+            style={styles.aiButton}
+            onPress={() =>
+              navigation.navigate("AIChat", {
+                topicTitle: title,
+                topicDescription: description.join(" "),
+              })
+            }
+            activeOpacity={0.8}
+          >
+            <View style={styles.aiButtonGlow} />
+            <Text style={styles.aiButtonIcon}>🤖</Text>
+            <Text style={styles.aiButtonText}>Ask AI</Text>
+            <Text style={styles.aiButtonSubtext}>Get instant answers</Text>
+          </TouchableOpacity>
+        </Animated.View>
+
         {/* Animated Description */}
         {showDescription && (
           <Animated.View
@@ -576,6 +603,57 @@ const styles = StyleSheet.create({
     textShadowColor: "rgba(255, 255, 255, 0.1)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 2,
+  },
+  aiButtonContainer: {
+    marginBottom: 20,
+  },
+  aiButton: {
+    backgroundColor: "rgba(78, 205, 196, 0.15)",
+    borderRadius: 20,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 2,
+    borderColor: "#4ecdc4",
+    position: "relative",
+    shadowColor: "#4ecdc4",
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.3,
+    shadowRadius: 15,
+    elevation: 10,
+  },
+  aiButtonGlow: {
+    position: "absolute",
+    top: -2,
+    left: -2,
+    right: -2,
+    bottom: -2,
+    borderRadius: 22,
+    backgroundColor: "transparent",
+    borderWidth: 1,
+    borderColor: "rgba(78, 205, 196, 0.5)",
+    shadowColor: "#4ecdc4",
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.8,
+    shadowRadius: 20,
+  },
+  aiButtonIcon: {
+    fontSize: 30,
+    marginBottom: 8,
+  },
+  aiButtonText: {
+    color: "#4ecdc4",
+    fontSize: 20,
+    fontWeight: "700",
+    textShadowColor: "rgba(78, 205, 196, 0.5)",
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 5,
+    marginBottom: 4,
+  },
+  aiButtonSubtext: {
+    color: "rgba(78, 205, 196, 0.8)",
+    fontSize: 14,
+    fontWeight: "400",
   },
 });
 
