@@ -6,7 +6,9 @@ const API_KEY = "AIzaSyBuFPhqupa4iY6x6ZfUZcrS2vZNaUshtoI";
 class AIService {
   constructor() {
     this.genAI = new GoogleGenerativeAI(API_KEY);
-    this.model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    this.model = this.genAI.getGenerativeModel({
+      model: "gemini-2.5-flash",
+    });
   }
 
   // Create topic-specific system prompt
