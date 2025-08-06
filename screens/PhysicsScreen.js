@@ -23,12 +23,12 @@ export default function PhysicsScreen({ navigation }) {
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 800,
+        duration: 1000,
         useNativeDriver: true,
       }),
       Animated.timing(slideAnim, {
         toValue: 0,
-        duration: 600,
+        duration: 800,
         useNativeDriver: true,
       }),
       Animated.spring(headerAnim, {
@@ -279,11 +279,11 @@ export default function PhysicsScreen({ navigation }) {
 
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
-      case 'Beginner': return '#4CAF50';
-      case 'Intermediate': return '#FF9800';
-      case 'Advanced': return '#F44336';
-      case 'Expert': return '#9C27B0';
-      default: return '#757575';
+      case 'Beginner': return ['#00FFA3', '#03DAC6'];
+      case 'Intermediate': return ['#00F5FF', '#0080FF'];
+      case 'Advanced': return ['#FF6B9D', '#C44569'];
+      case 'Expert': return ['#667eea', '#764ba2'];
+      default: return ['#757575', '#616161'];
     }
   };
 
@@ -300,9 +300,9 @@ export default function PhysicsScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
 
-      {/* Background Gradient */}
+      {/* Enhanced Background Gradient */}
       <LinearGradient
-        colors={['#0D1B2A', '#1E3A5F', '#FF6B6B20']}
+        colors={['#0F0F23', '#1A1A3A', '#2D1B69', '#1A1A3A', '#0F0F23']}
         style={styles.background}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
@@ -321,7 +321,7 @@ export default function PhysicsScreen({ navigation }) {
           activeOpacity={0.7}
         >
           <LinearGradient
-            colors={['rgba(255, 107, 107, 0.2)', 'rgba(255, 107, 107, 0.1)']}
+            colors={['rgba(255, 107, 157, 0.3)', 'rgba(196, 69, 105, 0.2)']}
             style={styles.backButtonGradient}
           >
             <Text style={styles.backArrowText}>←</Text>
@@ -331,11 +331,12 @@ export default function PhysicsScreen({ navigation }) {
         <View style={styles.headerContent}>
           <View style={styles.headerIconContainer}>
             <LinearGradient
-              colors={['#ff6b6b', '#ee5a52']}
+              colors={['#FF6B9D', '#C44569']}
               style={styles.headerIconGradient}
             >
               <Text style={styles.headerIcon}>⚛️</Text>
             </LinearGradient>
+            <View style={styles.headerIconGlow} />
           </View>
           <Text style={styles.headerTitle}>Physics</Text>
           <Text style={styles.headerSubtitle}>Explore the fundamental laws of nature</Text>
@@ -354,22 +355,43 @@ export default function PhysicsScreen({ navigation }) {
             { opacity: fadeAnim, transform: [{ translateY: slideAnim }] }
           ]}
         >
-          <View style={styles.statsContainer}>
+          <LinearGradient
+            colors={['rgba(255, 255, 255, 0.1)', 'rgba(255, 255, 255, 0.05)']}
+            style={styles.statsContainer}
+          >
             <View style={styles.statItem}>
+              <LinearGradient
+                colors={['#FF6B9D', '#C44569']}
+                style={styles.statIcon}
+              >
+                <Text style={styles.statIconText}>📊</Text>
+              </LinearGradient>
               <Text style={styles.statNumber}>{physicsTopics.length}</Text>
               <Text style={styles.statLabel}>Topics</Text>
             </View>
             <View style={styles.statDivider} />
             <View style={styles.statItem}>
+              <LinearGradient
+                colors={['#00F5FF', '#0080FF']}
+                style={styles.statIcon}
+              >
+                <Text style={styles.statIconText}>🔬</Text>
+              </LinearGradient>
               <Text style={styles.statNumber}>3D</Text>
               <Text style={styles.statLabel}>Models</Text>
             </View>
             <View style={styles.statDivider} />
             <View style={styles.statItem}>
+              <LinearGradient
+                colors={['#667eea', '#764ba2']}
+                style={styles.statIcon}
+              >
+                <Text style={styles.statIconText}>🤖</Text>
+              </LinearGradient>
               <Text style={styles.statNumber}>AI</Text>
               <Text style={styles.statLabel}>Assistant</Text>
             </View>
-          </View>
+          </LinearGradient>
         </Animated.View>
 
         {/* Topics Grid */}
@@ -379,7 +401,7 @@ export default function PhysicsScreen({ navigation }) {
             { opacity: fadeAnim, transform: [{ translateY: slideAnim }] }
           ]}
         >
-          <Text style={styles.sectionTitle}>Learning Topics</Text>
+          <Text style={styles.sectionTitle}>Physics Concepts</Text>
 
           {physicsTopics.map((topic, index) => (
             <Animated.View
@@ -398,7 +420,7 @@ export default function PhysicsScreen({ navigation }) {
                     {
                       scale: fadeAnim.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [0.9, 1],
+                        outputRange: [0.95, 1],
                       }),
                     },
                   ],
@@ -411,39 +433,54 @@ export default function PhysicsScreen({ navigation }) {
                 onPress={() => handleTopicPress(topic)}
               >
                 <LinearGradient
-                  colors={['rgba(255, 107, 107, 0.1)', 'rgba(255, 107, 107, 0.05)']}
+                  colors={['rgba(255, 255, 255, 0.1)', 'rgba(255, 255, 255, 0.05)']}
                   style={styles.topicCardGradient}
                 >
                   <View style={styles.topicCardContent}>
                     <View style={styles.topicHeader}>
-                      <View style={styles.topicNumber}>
+                      <LinearGradient
+                        colors={['#FF6B9D', '#C44569']}
+                        style={styles.topicNumber}
+                      >
                         <Text style={styles.topicNumberText}>{index + 1}</Text>
-                      </View>
+                      </LinearGradient>
                       <View style={styles.topicMetadata}>
-                        <View style={styles.categoryTag}>
+                        <LinearGradient
+                          colors={['rgba(255, 255, 255, 0.15)', 'rgba(255, 255, 255, 0.10)']}
+                          style={styles.categoryTag}
+                        >
                           <Text style={styles.categoryIcon}>{getCategoryIcon(topic.category)}</Text>
                           <Text style={styles.categoryText}>{topic.category}</Text>
-                        </View>
-                        <View style={styles.durationTag}>
+                        </LinearGradient>
+                        <LinearGradient
+                          colors={['rgba(255, 255, 255, 0.15)', 'rgba(255, 255, 255, 0.10)']}
+                          style={styles.durationTag}
+                        >
                           <Text style={styles.durationText}>⏱️ {topic.duration}</Text>
-                        </View>
+                        </LinearGradient>
                       </View>
                     </View>
                     
                     <Text style={styles.topicTitle}>{topic.title}</Text>
                     
                     <View style={styles.topicFooter}>
-                      <View style={[styles.difficultyBadge, { backgroundColor: getDifficultyColor(topic.difficulty) + '20' }]}>
-                        <View style={[styles.difficultyDot, { backgroundColor: getDifficultyColor(topic.difficulty) }]} />
-                        <Text style={[styles.difficultyText, { color: getDifficultyColor(topic.difficulty) }]}>
-                          {topic.difficulty}
-                        </Text>
-                      </View>
+                      <LinearGradient
+                        colors={getDifficultyColor(topic.difficulty)}
+                        style={styles.difficultyBadge}
+                      >
+                        <View style={styles.difficultyContent}>
+                          <View style={styles.difficultyDot} />
+                          <Text style={styles.difficultyText}>{topic.difficulty}</Text>
+                        </View>
+                      </LinearGradient>
                       
-                      <View style={styles.actionButton}>
+                      <LinearGradient
+                        colors={['#FF6B9D', '#C44569']}
+                        style={styles.actionButton}
+                      >
                         <Text style={styles.actionButtonText}>Explore</Text>
                         <Text style={styles.actionArrow}>→</Text>
-                      </View>
+                      </LinearGradient>
                     </View>
                   </View>
                 </LinearGradient>
@@ -462,7 +499,7 @@ export default function PhysicsScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0D1B2A",
+    backgroundColor: "#0F0F23",
   },
   background: {
     position: 'absolute',
@@ -493,10 +530,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(255, 107, 107, 0.3)",
+    borderColor: "rgba(255, 107, 157, 0.3)",
   },
   backArrowText: {
-    color: "#ff6b6b",
+    color: "#FF6B9D",
     fontSize: 24,
     fontWeight: "bold",
   },
@@ -505,36 +542,50 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   headerIconContainer: {
-    marginBottom: 16,
+    marginBottom: 20,
+    position: 'relative',
   },
   headerIconGradient: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+    width: 90,
+    height: 90,
+    borderRadius: 45,
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: "#ff6b6b",
+    shadowColor: "#FF6B9D",
     shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.3,
-    shadowRadius: 16,
-    elevation: 12,
+    shadowOpacity: 0.4,
+    shadowRadius: 20,
+    elevation: 16,
+  },
+  headerIconGlow: {
+    position: 'absolute',
+    width: 110,
+    height: 110,
+    borderRadius: 55,
+    top: -10,
+    left: -10,
+    backgroundColor: 'rgba(255, 107, 157, 0.15)',
+    shadowColor: "#FF6B9D",
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.8,
+    shadowRadius: 25,
   },
   headerIcon: {
-    fontSize: 40,
+    fontSize: 45,
   },
   headerTitle: {
-    fontSize: 36,
+    fontSize: 38,
     fontWeight: "900",
     color: "#FFFFFF",
     textAlign: "center",
     marginBottom: 8,
-    textShadowColor: 'rgba(0,0,0,0.3)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 4,
+    textShadowColor: 'rgba(255, 107, 157, 0.4)',
+    textShadowOffset: { width: 0, height: 4 },
+    textShadowRadius: 12,
   },
   headerSubtitle: {
     fontSize: 16,
-    color: "#ff6b6b",
+    color: "#B8BFF8",
     textAlign: "center",
     fontWeight: "600",
     opacity: 0.9,
@@ -547,62 +598,76 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   statsSection: {
-    marginBottom: 30,
+    marginBottom: 35,
   },
   statsContainer: {
     flexDirection: 'row',
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    borderRadius: 20,
-    paddingVertical: 20,
+    borderRadius: 25,
+    paddingVertical: 25,
     paddingHorizontal: 15,
     justifyContent: 'space-around',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: 'rgba(255, 107, 107, 0.2)',
+    borderColor: 'rgba(255, 255, 255, 0.15)',
   },
   statItem: {
     alignItems: 'center',
     flex: 1,
   },
+  statIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 8,
+    shadowColor: "#FF6B9D",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
+  },
+  statIconText: {
+    fontSize: 20,
+  },
   statNumber: {
     fontSize: 24,
     fontWeight: '900',
-    color: '#ff6b6b',
+    color: '#FFFFFF',
     marginBottom: 4,
   },
   statLabel: {
     fontSize: 12,
-    color: '#B8C5D6',
+    color: '#B8BFF8',
     fontWeight: '600',
   },
   statDivider: {
     width: 1,
-    height: 40,
-    backgroundColor: 'rgba(255, 107, 107, 0.2)',
+    height: 60,
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
   },
   topicsSection: {
     marginBottom: 30,
   },
   sectionTitle: {
-    fontSize: 24,
-    fontWeight: "800",
+    fontSize: 26,
+    fontWeight: "900",
     color: "#FFFFFF",
-    marginBottom: 20,
+    marginBottom: 25,
     textAlign: "left",
   },
   topicCardContainer: {
-    marginBottom: 16,
+    marginBottom: 20,
   },
   topicCard: {
-    borderRadius: 20,
+    borderRadius: 24,
     overflow: 'hidden',
     position: 'relative',
   },
   topicCardGradient: {
-    padding: 20,
+    padding: 24,
     borderWidth: 1,
-    borderColor: 'rgba(255, 107, 107, 0.2)',
-    borderRadius: 20,
+    borderColor: 'rgba(255, 255, 255, 0.15)',
   },
   cardGlow: {
     position: 'absolute',
@@ -610,12 +675,13 @@ const styles = StyleSheet.create({
     left: -2,
     right: -2,
     bottom: -2,
-    borderRadius: 22,
-    shadowColor: "#ff6b6b",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 12,
-    elevation: 8,
+    borderRadius: 26,
+    shadowColor: "#FF6B9D",
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.2,
+    shadowRadius: 16,
+    elevation: 12,
+    backgroundColor: 'rgba(255, 107, 157, 0.05)',
   },
   topicCardContent: {
     position: 'relative',
@@ -624,65 +690,67 @@ const styles = StyleSheet.create({
   topicHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 12,
+    marginBottom: 16,
   },
   topicNumber: {
-    width: 36,
-    height: 36,
-    backgroundColor: '#ff6b6b',
-    borderRadius: 18,
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 12,
+    marginRight: 15,
+    shadowColor: "#FF6B9D",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
   },
   topicNumberText: {
     color: '#FFFFFF',
     fontSize: 16,
-    fontWeight: '800',
+    fontWeight: '900',
   },
   topicMetadata: {
     flex: 1,
     flexDirection: 'row',
-    gap: 8,
+    gap: 10,
   },
   categoryTag: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 15,
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.2)',
   },
   categoryIcon: {
-    fontSize: 12,
-    marginRight: 4,
+    fontSize: 14,
+    marginRight: 6,
   },
   categoryText: {
     color: '#FFFFFF',
-    fontSize: 10,
-    fontWeight: '600',
+    fontSize: 12,
+    fontWeight: '700',
   },
   durationTag: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 15,
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.2)',
   },
   durationText: {
-    color: '#B8C5D6',
-    fontSize: 10,
+    color: '#B8BFF8',
+    fontSize: 12,
     fontWeight: '600',
   },
   topicTitle: {
-    fontSize: 16,
-    fontWeight: '700',
+    fontSize: 18,
+    fontWeight: '800',
     color: '#FFFFFF',
-    lineHeight: 22,
-    marginBottom: 16,
+    lineHeight: 24,
+    marginBottom: 20,
   },
   topicFooter: {
     flexDirection: 'row',
@@ -690,42 +758,52 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   difficultyBadge: {
+    borderRadius: 15,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  difficultyContent: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 10,
-    paddingVertical: 6,
-    borderRadius: 12,
-    borderWidth: 1,
   },
   difficultyDot: {
     width: 6,
     height: 6,
     borderRadius: 3,
-    marginRight: 6,
+    backgroundColor: '#FFFFFF',
+    marginRight: 8,
   },
   difficultyText: {
+    color: '#FFFFFF',
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   actionButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 107, 107, 0.15)',
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 107, 107, 0.3)',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 15,
+    shadowColor: "#FF6B9D",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
   },
   actionButtonText: {
-    color: '#ff6b6b',
-    fontSize: 12,
-    fontWeight: '700',
-    marginRight: 4,
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '800',
+    marginRight: 6,
   },
   actionArrow: {
-    color: '#ff6b6b',
-    fontSize: 14,
+    color: '#FFFFFF',
+    fontSize: 16,
     fontWeight: 'bold',
   },
 });
