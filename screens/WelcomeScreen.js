@@ -24,12 +24,12 @@ export default function WelcomeScreen({ navigation }) {
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 1000,
+        duration: 1200,
         useNativeDriver: true,
       }),
       Animated.timing(slideAnim, {
         toValue: 0,
-        duration: 800,
+        duration: 1000,
         useNativeDriver: true,
       }),
       Animated.spring(scaleAnim, {
@@ -45,12 +45,12 @@ export default function WelcomeScreen({ navigation }) {
       Animated.sequence([
         Animated.timing(floatAnim, {
           toValue: 10,
-          duration: 2000,
+          duration: 3000,
           useNativeDriver: true,
         }),
         Animated.timing(floatAnim, {
           toValue: 0,
-          duration: 2000,
+          duration: 3000,
           useNativeDriver: true,
         }),
       ])
@@ -66,19 +66,27 @@ export default function WelcomeScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
       
-      {/* Animated Background */}
+      {/* Enhanced Background with multiple layers */}
       <LinearGradient
-        colors={['#0D1B2A', '#1E3A5F', '#2E5077', '#3E6B8A']}
+        colors={['#0F0F23', '#1A1A3A', '#2D1B69', '#1A1A3A', '#0F0F23']}
         style={styles.background}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
       />
+      
+      {/* Overlay pattern */}
+      <View style={styles.backgroundPattern} />
 
       {/* Floating Science Icons */}
       <Animated.View style={[styles.floatingIcon, styles.atom, { 
         transform: [{ translateY: floatAnim }] 
       }]}>
-        <Text style={styles.floatingIconText}>⚛️</Text>
+        <LinearGradient
+          colors={['#00F5FF', '#0080FF']}
+          style={styles.iconGlow}
+        >
+          <Text style={styles.floatingIconText}>⚛️</Text>
+        </LinearGradient>
       </Animated.View>
       
       <Animated.View style={[styles.floatingIcon, styles.molecule, { 
@@ -87,7 +95,12 @@ export default function WelcomeScreen({ navigation }) {
           outputRange: [0, -8]
         }) }] 
       }]}>
-        <Text style={styles.floatingIconText}>🧬</Text>
+        <LinearGradient
+          colors={['#FF6B9D', '#C44569']}
+          style={styles.iconGlow}
+        >
+          <Text style={styles.floatingIconText}>🧬</Text>
+        </LinearGradient>
       </Animated.View>
 
       <Animated.View style={[styles.floatingIcon, styles.flask, { 
@@ -96,7 +109,12 @@ export default function WelcomeScreen({ navigation }) {
           outputRange: [0, 12]
         }) }] 
       }]}>
-        <Text style={styles.floatingIconText}>🧪</Text>
+        <LinearGradient
+          colors={['#00FFA3', '#03DAC6']}
+          style={styles.iconGlow}
+        >
+          <Text style={styles.floatingIconText}>🧪</Text>
+        </LinearGradient>
       </Animated.View>
 
       {/* Header Section */}
@@ -114,11 +132,14 @@ export default function WelcomeScreen({ navigation }) {
       >
         <View style={styles.logoContainer}>
           <LinearGradient
-            colors={['#4ECDC4', '#44A08D']}
+            colors={['#667eea', '#764ba2', '#f093fb', '#f5576c']}
             style={styles.logoGradient}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
           >
             <Text style={styles.logoIcon}>🔬</Text>
           </LinearGradient>
+          <View style={styles.logoGlow} />
         </View>
         
         <Text style={styles.title}>Smart Sci AR</Text>
@@ -128,20 +149,39 @@ export default function WelcomeScreen({ navigation }) {
           <LinearGradient
             colors={['#667eea', '#764ba2']}
             style={styles.gradeBadge}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 0 }}
           >
             <Text style={styles.gradeText}>Classes 6-12</Text>
           </LinearGradient>
           
           <View style={styles.subjectBadges}>
-            <View style={[styles.subjectBadge, styles.physicsBadge]}>
+            <LinearGradient
+              colors={['#FF6B9D', '#C44569']}
+              style={[styles.subjectBadge, styles.physicsBadge]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+            >
               <Text style={styles.subjectBadgeText}>Physics</Text>
-            </View>
-            <View style={[styles.subjectBadge, styles.chemistryBadge]}>
+            </LinearGradient>
+            
+            <LinearGradient
+              colors={['#00F5FF', '#0080FF']}
+              style={[styles.subjectBadge, styles.chemistryBadge]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+            >
               <Text style={styles.subjectBadgeText}>Chemistry</Text>
-            </View>
-            <View style={[styles.subjectBadge, styles.biologyBadge]}>
+            </LinearGradient>
+            
+            <LinearGradient
+              colors={['#00FFA3', '#03DAC6']}
+              style={[styles.subjectBadge, styles.biologyBadge]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+            >
               <Text style={styles.subjectBadgeText}>Biology</Text>
-            </View>
+            </LinearGradient>
           </View>
         </View>
       </Animated.View>
@@ -150,29 +190,47 @@ export default function WelcomeScreen({ navigation }) {
       <Animated.View style={[styles.contentSection, { opacity: fadeAnim }]}>
         <View style={styles.featuresList}>
           <View style={styles.featureItem}>
-            <View style={styles.featureIcon}>
+            <LinearGradient
+              colors={['#667eea', '#764ba2']}
+              style={styles.featureIcon}
+            >
               <Text style={styles.featureIconText}>📱</Text>
+            </LinearGradient>
+            <View style={styles.featureTextContainer}>
+              <Text style={styles.featureTitle}>Interactive 3D Models</Text>
+              <Text style={styles.featureText}>Explore science concepts in 3D</Text>
             </View>
-            <Text style={styles.featureText}>Interactive 3D Models</Text>
           </View>
           
           <View style={styles.featureItem}>
-            <View style={styles.featureIcon}>
+            <LinearGradient
+              colors={['#00F5FF', '#0080FF']}
+              style={styles.featureIcon}
+            >
               <Text style={styles.featureIconText}>🤖</Text>
+            </LinearGradient>
+            <View style={styles.featureTextContainer}>
+              <Text style={styles.featureTitle}>AI-Powered Learning</Text>
+              <Text style={styles.featureText}>Get instant answers from AI tutor</Text>
             </View>
-            <Text style={styles.featureText}>AI-Powered Learning</Text>
           </View>
           
           <View style={styles.featureItem}>
-            <View style={styles.featureIcon}>
+            <LinearGradient
+              colors={['#FF6B9D', '#C44569']}
+              style={styles.featureIcon}
+            >
               <Text style={styles.featureIconText}>🎯</Text>
+            </LinearGradient>
+            <View style={styles.featureTextContainer}>
+              <Text style={styles.featureTitle}>Personalized Experience</Text>
+              <Text style={styles.featureText}>Tailored learning for every student</Text>
             </View>
-            <Text style={styles.featureText}>Personalized Experience</Text>
           </View>
         </View>
         
         <Text style={styles.welcomeText}>
-          Explore the wonders of science with cutting-edge AR technology and AI assistance
+          Discover the magic of science with cutting-edge AR technology, interactive 3D models, and intelligent AI assistance
         </Text>
       </Animated.View>
 
@@ -184,17 +242,17 @@ export default function WelcomeScreen({ navigation }) {
           activeOpacity={0.8}
         >
           <LinearGradient
-            colors={['#11998e', '#38ef7d']}
+            colors={['#667eea', '#764ba2', '#f093fb']}
             style={styles.buttonGradient}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
           >
-            <Text style={styles.getStartedButtonText}>Get Started</Text>
-            <Text style={styles.buttonArrow}>→</Text>
+            <Text style={styles.getStartedButtonText}>Begin Your Journey</Text>
+            <Text style={styles.buttonArrow}>🚀</Text>
           </LinearGradient>
         </TouchableOpacity>
         
-        <Text style={styles.footerText}>Join thousands of students learning science</Text>
+        <Text style={styles.footerText}>Join over 10,000 students exploring science</Text>
       </Animated.View>
     </SafeAreaView>
   );
@@ -203,7 +261,7 @@ export default function WelcomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0D1B2A",
+    backgroundColor: "#0F0F23",
   },
   background: {
     position: 'absolute',
@@ -212,16 +270,37 @@ const styles = StyleSheet.create({
     top: 0,
     height: height,
   },
+  backgroundPattern: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    opacity: 0.03,
+    backgroundColor: 'transparent',
+    backgroundImage: 'radial-gradient(circle at 25% 25%, #667eea 0%, transparent 50%), radial-gradient(circle at 75% 75%, #764ba2 0%, transparent 50%)',
+  },
   floatingIcon: {
     position: 'absolute',
     zIndex: 1,
   },
   atom: { top: '15%', right: '10%' },
-  molecule: { top: '25%', left: '15%' },
-  flask: { top: '35%', right: '20%' },
+  molecule: { top: '30%', left: '8%' },
+  flask: { top: '45%', right: '15%' },
+  iconGlow: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: "#667eea",
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.6,
+    shadowRadius: 20,
+    elevation: 10,
+  },
   floatingIconText: {
-    fontSize: 30,
-    opacity: 0.3,
+    fontSize: 24,
   },
   headerSection: {
     flex: 2.5,
@@ -231,88 +310,94 @@ const styles = StyleSheet.create({
     zIndex: 2,
   },
   logoContainer: {
-    marginBottom: 20,
+    marginBottom: 30,
+    position: 'relative',
   },
   logoGradient: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    shadowColor: "#4ECDC4",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.3,
-    shadowRadius: 16,
-    elevation: 12,
+    shadowColor: "#667eea",
+    shadowOffset: { width: 0, height: 12 },
+    shadowOpacity: 0.4,
+    shadowRadius: 24,
+    elevation: 16,
+  },
+  logoGlow: {
+    position: 'absolute',
+    width: 140,
+    height: 140,
+    borderRadius: 70,
+    top: -10,
+    left: -10,
+    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+    shadowColor: "#667eea",
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.8,
+    shadowRadius: 30,
   },
   logoIcon: {
-    fontSize: 50,
+    fontSize: 60,
   },
   title: {
-    fontSize: 42,
+    fontSize: 48,
     fontWeight: "900",
     color: "#FFFFFF",
     textAlign: "center",
-    marginBottom: 8,
-    letterSpacing: 1.2,
-    textShadowColor: 'rgba(0,0,0,0.3)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 4,
+    marginBottom: 12,
+    letterSpacing: 1.5,
+    textShadowColor: 'rgba(102, 126, 234, 0.5)',
+    textShadowOffset: { width: 0, height: 4 },
+    textShadowRadius: 8,
   },
   subtitle: {
-    fontSize: 18,
-    color: "#4ECDC4",
+    fontSize: 20,
+    color: "#B8BFF8",
     textAlign: "center",
     fontWeight: "600",
-    marginBottom: 30,
+    marginBottom: 40,
     opacity: 0.9,
   },
   badgeContainer: {
     alignItems: 'center',
   },
   gradeBadge: {
-    paddingHorizontal: 25,
-    paddingVertical: 12,
-    borderRadius: 25,
-    marginBottom: 20,
+    paddingHorizontal: 30,
+    paddingVertical: 15,
+    borderRadius: 30,
+    marginBottom: 25,
     shadowColor: "#667eea",
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
+    elevation: 8,
+  },
+  gradeText: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "800",
+    textAlign: "center",
+  },
+  subjectBadges: {
+    flexDirection: 'row',
+    gap: 15,
+  },
+  subjectBadge: {
+    paddingHorizontal: 18,
+    paddingVertical: 10,
+    borderRadius: 25,
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 6,
   },
-  gradeText: {
-    color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "700",
-    textAlign: "center",
-  },
-  subjectBadges: {
-    flexDirection: 'row',
-    gap: 12,
-  },
-  subjectBadge: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
-    borderWidth: 2,
-  },
-  physicsBadge: {
-    borderColor: '#ff6b6b',
-    backgroundColor: 'rgba(255, 107, 107, 0.1)',
-  },
-  chemistryBadge: {
-    borderColor: '#4ecdc4',
-    backgroundColor: 'rgba(78, 205, 196, 0.1)',
-  },
-  biologyBadge: {
-    borderColor: '#45b7d1',
-    backgroundColor: 'rgba(69, 183, 209, 0.1)',
-  },
   subjectBadgeText: {
     color: '#FFFFFF',
-    fontSize: 12,
-    fontWeight: '600',
+    fontSize: 14,
+    fontWeight: '700',
   },
   contentSection: {
     flex: 2,
@@ -321,39 +406,55 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
   },
   featuresList: {
-    marginBottom: 30,
+    marginBottom: 35,
   },
   featureItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: 20,
     paddingHorizontal: 20,
+    paddingVertical: 15,
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.1)',
   },
   featureIcon: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    backgroundColor: 'rgba(78, 205, 196, 0.15)',
+    width: 60,
+    height: 60,
+    borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 16,
-    borderWidth: 1,
-    borderColor: 'rgba(78, 205, 196, 0.3)',
+    marginRight: 20,
+    shadowColor: "#667eea",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 6,
   },
   featureIconText: {
-    fontSize: 24,
+    fontSize: 28,
+  },
+  featureTextContainer: {
+    flex: 1,
+  },
+  featureTitle: {
+    fontSize: 18,
+    color: '#FFFFFF',
+    fontWeight: '700',
+    marginBottom: 4,
   },
   featureText: {
-    fontSize: 16,
-    color: '#FFFFFF',
-    fontWeight: '600',
+    fontSize: 14,
+    color: '#B8BFF8',
+    fontWeight: '500',
   },
   welcomeText: {
     fontSize: 16,
-    color: "#B8C5D6",
+    color: "#9BA3EB",
     textAlign: "center",
-    lineHeight: 24,
-    fontWeight: "400",
+    lineHeight: 26,
+    fontWeight: "500",
     opacity: 0.9,
   },
   actionSection: {
@@ -364,39 +465,37 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
   },
   getStartedButton: {
-    width: width * 0.8,
-    height: 60,
-    borderRadius: 30,
-    marginBottom: 20,
-    shadowColor: "#11998e",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.3,
-    shadowRadius: 16,
-    elevation: 12,
+    width: width * 0.85,
+    height: 65,
+    borderRadius: 32,
+    marginBottom: 25,
+    shadowColor: "#667eea",
+    shadowOffset: { width: 0, height: 12 },
+    shadowOpacity: 0.4,
+    shadowRadius: 20,
+    elevation: 16,
   },
   buttonGradient: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 30,
+    borderRadius: 32,
   },
   getStartedButtonText: {
     color: "#FFFFFF",
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "800",
     letterSpacing: 0.5,
-    marginRight: 8,
+    marginRight: 10,
   },
   buttonArrow: {
-    color: "#FFFFFF",
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 22,
   },
   footerText: {
     fontSize: 14,
-    color: "#7A8B9A",
+    color: "#7A82D1",
     textAlign: 'center',
-    fontWeight: '500',
+    fontWeight: '600',
   },
 });
